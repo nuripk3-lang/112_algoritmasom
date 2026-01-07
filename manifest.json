@@ -1,21 +1,45 @@
 {
   "name": "Kırklareli 112 Eğitim Asistanı",
   "short_name": "112 Asistan",
-  "start_url": "index.html",
+  "description": "Hastane öncesi acil müdahale algoritmaları — hızlı referans, dozlar ve uyarılar",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#b91c1c",
   "orientation": "portrait",
+  "categories": ["medical", "education", "health"],
+  "lang": "tr",
+  "dir": "ltr",
   "icons": [
     {
       "src": "img/logo.jpg",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/jpeg",
+      "purpose": "any"
     },
     {
       "src": "img/logo.jpg",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Çocuk Doz Hesaplama",
+      "short_name": "Doz",
+      "description": "Çocuk doz hesaplayıcısını aç",
+      "url": "./index.html#doz",
+      "icons": [{ "src": "img/logo.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "CPR Sayacı",
+      "short_name": "CPR",
+      "description": "CPR sayacını aç",
+      "url": "./index.html#cpr",
+      "icons": [{ "src": "img/logo.jpg", "sizes": "192x192" }]
     }
   ]
 }

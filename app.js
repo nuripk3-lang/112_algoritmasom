@@ -525,27 +525,33 @@ function escapeHtml(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-function searchAlgo() {
-  const q = document.getElementById("searchInput") ? document.getElementById("searchInput").value.trim().toLowerCase() : '';
-  document.querySelectorAll("button[onclick*='showAlgo']").forEach(btn => {
-    const text = (btn.textContent || btn.innerText || '').toLowerCase();
-    const match = !q || text.includes(q);
-    btn.style.display = match ? 'inline-block' : 'none';
-  });
-}
+// Eski searchAlgo fonksiyonu gelişmiş versiyonla değiştirildi - aşağıda
 
 function showAlgo(key, grupName) {
   try {
     const grupKey = (grupName && grupName.toLowerCase().startsWith('y')) ? 'yetiskin' : 'cocuk';
     const algo = (algorithmData[grupKey] || {})[key.toLowerCase().trim()];
     const contentEl = document.getElementById("content");
-    if (!contentEl || !algo) return;
+    if (!contentEl) {
+      console.error('İçerik elementi bulunamadı');
+      return;
+    }
+    if (!algo) {
+      console.warn(`Algoritma bulunamadı: ${key} (${grupKey})`);
+      contentEl.innerHTML = '<div style="padding:20px; text-align:center; color:#dc2626;"><p>Algoritma bulunamadı. Lütfen ana menüye dönün.</p><button class="back-btn" onclick="clearContent()">⬅️ Geri Dön</button></div>';
+      contentEl.style.display = "block";
+      return;
+    }
 
 let html = `
     <button class="back-btn" onclick="clearContent()">⬅️ Geri Dön</button>
     
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; gap: 10px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; gap: 10px; flex-wrap: wrap;">
         <h2 style="color:#b91c1c; margin: 0; font-size: 1.1rem; line-height: 1.2;">${escapeHtml(algo.title)}</h2>
+        
+        <button id="fav-${key}-${grupName}" class="btn-favorite" onclick="toggleFavorite('${key}', '${grupName}'); updateFavoriteButton('${key}', '${grupName}');" style="margin-left: auto;">
+            ${isFavorite(key, grupName) ? '⭐ Favorilerden Çıkar' : '⭐ Favorilere Ekle'}
+        </button>
         
         <div style="display: flex; flex-direction: column; gap: 6px; flex-shrink: 0;">
             ${algo.ekgList ? `
@@ -644,7 +650,7 @@ let html = `
     });
     if (algo.image) {
       html += `<div class="algo-image" style="margin-top:20px; text-align:center;">
-                <img src="${algo.image}" alt="${algo.title}" style="max-width:100%; height:auto; border-radius:8px; border: 2px solid #ddd;">
+                <img src="${algo.image}" alt="${escapeHtml(algo.title)}" loading="lazy" style="max-width:100%; height:auto; border-radius:8px; border: 2px solid #ddd;" onerror="this.style.display='none'; console.error('Görsel yüklenemedi:', '${algo.image}');">
                </div>`;
     }
 
@@ -652,7 +658,17 @@ let html = `
     contentEl.innerHTML = html;
     contentEl.style.display = "block";
     contentEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  } catch (e) { console.error(e); }
+    
+    // Favori butonunu güncelle
+    updateFavoriteButton(key, grupName);
+  } catch (e) { 
+    console.error('showAlgo hatası:', e);
+    const contentEl = document.getElementById("content");
+    if (contentEl) {
+      contentEl.innerHTML = '<div style="padding:20px; text-align:center; color:#dc2626;"><p>Bir hata oluştu. Lütfen sayfayı yenileyin.</p><button class="back-btn" onclick="clearContent()">⬅️ Geri Dön</button></div>';
+      contentEl.style.display = "block";
+    }
+  }
 }
 function tahminiKiloHesapla() {
   const tip = document.getElementById("yasTipi").value;
@@ -754,6 +770,9 @@ function clearContent() {
     c.style.display = "none"; 
     c.innerHTML = ''; 
   }
+  
+  // Favoriler bölümünü göster
+  renderFavorites();
   
   // Sayfayı en üste kaydırır
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1037,8 +1056,8 @@ function openEkgGallery(liste) {
     liste.forEach(ekg => {
         galeriHtml += `
             <div style="width:100%; max-width:500px; margin-bottom:40px; text-align:center;">
-                <p style="color:#fca5a5; font-weight:bold; margin-bottom:8px; font-size:16px;">${ekg.isim}</p>
-                <img src="${ekg.link}" style="width:100%; border-radius:12px; border:2px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" alt="${ekg.isim}">
+                <p style="color:#fca5a5; font-weight:bold; margin-bottom:8px; font-size:16px;">${escapeHtml(ekg.isim)}</p>
+                <img src="${ekg.link}" loading="lazy" style="width:100%; border-radius:12px; border:2px solid #333; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" alt="${escapeHtml(ekg.isim)}" onerror="this.parentElement.innerHTML='<p style=\\'color:#fca5a5;\\'>Görsel yüklenemedi</p>';">
             </div>
         `;
     });
@@ -1053,29 +1072,46 @@ function openEkgGallery(liste) {
 }
 
 function openVideoPlayer(videoUrl, videoBaslik) {
-    const modal = document.createElement('div');
-    modal.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.98); z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:15px;";
-    
-    modal.innerHTML = `
-        <div style="width:100%; max-width:500px; position:relative;">
-            <h3 style="color:white; text-align:center; margin-bottom:15px; font-family:sans-serif;">${videoBaslik}</h3>
-            
-            <video controls autoplay style="width:100%; border-radius:12px; border:1px solid #444; background:#000;">
-                <source src="${videoUrl}" type="video/mp4">
-                Tarayıcınız video oynatmayı desteklemiyor.
-            </video>
-            
-            <div style="margin-top:20px; text-align:center;">
-                <button onclick="this.parentElement.parentElement.parentElement.remove()" 
-                        style="padding:12px 40px; background:#fff; color:#000; border:none; border-radius:25px; font-weight:bold; cursor:pointer;">
-                    Kapat
-                </button>
+    try {
+        const modal = document.createElement('div');
+        modal.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.98); z-index:10000; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:15px;";
+        
+        modal.innerHTML = `
+            <div style="width:100%; max-width:500px; position:relative;">
+                <h3 style="color:white; text-align:center; margin-bottom:15px; font-family:sans-serif;">${escapeHtml(videoBaslik)}</h3>
+                
+                <video controls autoplay preload="metadata" style="width:100%; border-radius:12px; border:1px solid #444; background:#000;">
+                    <source src="${videoUrl}" type="video/mp4">
+                    Tarayıcınız video oynatmayı desteklemiyor.
+                </video>
+                
+                <div style="margin-top:20px; text-align:center;">
+                    <button onclick="this.parentElement.parentElement.parentElement.remove()" 
+                            style="padding:12px 40px; background:#fff; color:#000; border:none; border-radius:25px; font-weight:bold; cursor:pointer;">
+                        Kapat
+                    </button>
+                </div>
             </div>
-        </div>
-    `;
-    
-    document.body.appendChild(modal);
-    modal.onclick = (e) => { if(e.target === modal) modal.remove(); };
+        `;
+        
+        document.body.appendChild(modal);
+        modal.onclick = (e) => { if(e.target === modal) modal.remove(); };
+        
+        // Video yükleme hatası kontrolü
+        const video = modal.querySelector('video');
+        if (video) {
+            video.addEventListener('error', function(e) {
+                console.error('Video yükleme hatası:', videoUrl);
+                const errorDiv = document.createElement('div');
+                errorDiv.style.cssText = "color:white; text-align:center; padding:20px; background:rgba(220,38,38,0.8); border-radius:8px; margin-top:10px;";
+                errorDiv.textContent = 'Video yüklenemedi. Dosya mevcut değil olabilir.';
+                video.parentElement.appendChild(errorDiv);
+            });
+        }
+    } catch (error) {
+        console.error('Video oynatıcı hatası:', error);
+        alert('Video oynatıcı açılamadı. Lütfen tekrar deneyin.');
+    }
 }
 
 function showProcedures() {
@@ -1259,3 +1295,210 @@ function playAudio(file) {
         alert("Ses çalınamadı. Lütfen dosyayı kontrol edin veya tarayıcı izinlerini açın.");
     });
 }
+
+// ========== DARK MODE SİSTEMİ ==========
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme);
+}
+
+function updateThemeIcon(theme) {
+    const btn = document.getElementById('themeToggle');
+    if (btn) {
+        btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    }
+}
+
+// Sayfa yüklendiğinde tema yükle
+document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+});
+
+// ========== FAVORİLER SİSTEMİ ==========
+function getFavorites() {
+    try {
+        const favorites = localStorage.getItem('favorites');
+        return favorites ? JSON.parse(favorites) : [];
+    } catch (e) {
+        console.error('Favoriler yüklenemedi:', e);
+        return [];
+    }
+}
+
+function saveFavorites(favorites) {
+    try {
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+    } catch (e) {
+        console.error('Favoriler kaydedilemedi:', e);
+    }
+}
+
+function toggleFavorite(key, grupName) {
+    const favorites = getFavorites();
+    const favoriteId = `${grupName}_${key}`;
+    const index = favorites.indexOf(favoriteId);
+    
+    if (index > -1) {
+        favorites.splice(index, 1);
+    } else {
+        favorites.push(favoriteId);
+    }
+    
+    saveFavorites(favorites);
+    renderFavorites();
+    updateFavoriteButton(key, grupName);
+}
+
+function isFavorite(key, grupName) {
+    const favorites = getFavorites();
+    const favoriteId = `${grupName}_${key}`;
+    return favorites.includes(favoriteId);
+}
+
+function updateFavoriteButton(key, grupName) {
+    // Algoritma sayfasındaki favori butonunu güncelle
+    const favoriteBtn = document.getElementById(`fav-${key}-${grupName}`);
+    if (favoriteBtn) {
+        if (isFavorite(key, grupName)) {
+            favoriteBtn.classList.add('active');
+            favoriteBtn.textContent = '⭐ Favorilerden Çıkar';
+        } else {
+            favoriteBtn.classList.remove('active');
+            favoriteBtn.textContent = '⭐ Favorilere Ekle';
+        }
+    }
+}
+
+function renderFavorites() {
+    const favorites = getFavorites();
+    const favoritesSection = document.getElementById('favoritesSection');
+    const favoritesGrid = document.getElementById('favoritesGrid');
+    const noFavorites = document.getElementById('noFavorites');
+    
+    if (!favoritesSection || !favoritesGrid) return;
+    
+    if (favorites.length === 0) {
+        favoritesSection.style.display = 'none';
+        return;
+    }
+    
+    favoritesSection.style.display = 'block';
+    favoritesGrid.innerHTML = '';
+    
+    favorites.forEach(favId => {
+        const [grupName, key] = favId.split('_');
+        const grupKey = grupName.toLowerCase() === 'yetişkin' || grupName.toLowerCase().startsWith('y') ? 'yetiskin' : 'cocuk';
+        const algo = algorithmData[grupKey]?.[key];
+        
+        if (!algo) return;
+        
+        const favItem = document.createElement('div');
+        favItem.className = 'favorite-item';
+        favItem.innerHTML = `
+            <div style="font-weight: bold; margin-bottom: 5px;">${escapeHtml(algo.title)}</div>
+            <div style="font-size: 12px; color: var(--muted);">${grupName}</div>
+        `;
+        favItem.onclick = () => showAlgo(key, grupName);
+        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '✕';
+        removeBtn.style.cssText = 'float: right; background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 18px; padding: 0; width: 24px; height: 24px;';
+        removeBtn.onclick = (e) => {
+            e.stopPropagation();
+            toggleFavorite(key, grupName);
+        };
+        
+        favItem.appendChild(removeBtn);
+        favoritesGrid.appendChild(favItem);
+    });
+    
+    if (noFavorites) noFavorites.style.display = 'none';
+}
+
+// Sayfa yüklendiğinde favorileri göster
+window.addEventListener('load', () => {
+    setTimeout(renderFavorites, 100);
+});
+
+// ========== GELİŞMİŞ ARAMA SİSTEMİ ==========
+function fuzzyMatch(str, pattern) {
+    pattern = pattern.toLowerCase();
+    str = str.toLowerCase();
+    let patternIdx = 0;
+    for (let i = 0; i < str.length && patternIdx < pattern.length; i++) {
+        if (str[i] === pattern[patternIdx]) {
+            patternIdx++;
+        }
+    }
+    return patternIdx === pattern.length;
+}
+
+function searchAlgo() {
+    const q = document.getElementById("searchInput") ? document.getElementById("searchInput").value.trim().toLowerCase() : '';
+    const buttons = document.querySelectorAll("button[onclick*='showAlgo']");
+    
+    if (!q) {
+        buttons.forEach(btn => {
+            btn.style.display = 'inline-block';
+        });
+        return;
+    }
+    
+    let matchCount = 0;
+    
+    buttons.forEach(btn => {
+        const text = (btn.textContent || btn.innerText || '').toLowerCase();
+        const tags = (btn.getAttribute('data-tags') || '').toLowerCase();
+        const category = (btn.getAttribute('data-category') || '').toLowerCase();
+        
+        // 1. Tam eşleşme (en yüksek öncelik)
+        const exactMatch = text.includes(q) || tags.includes(q) || category.includes(q);
+        
+        // 2. Fuzzy match (yazım hatası toleransı)
+        const fuzzyMatchText = fuzzyMatch(text, q) || fuzzyMatch(tags, q);
+        
+        // 3. Kelime bazlı arama (boşluklarla ayrılmış)
+        const words = q.split(/\s+/);
+        const wordMatch = words.every(word => 
+            text.includes(word) || tags.includes(word) || category.includes(word)
+        );
+        
+        const match = exactMatch || fuzzyMatchText || wordMatch;
+        btn.style.display = match ? 'inline-block' : 'none';
+        
+        if (match) matchCount++;
+    });
+    
+    // Arama sonuçları yoksa bilgi ver
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        if (q && matchCount === 0) {
+            searchInput.style.border = '2px solid var(--danger)';
+            searchInput.title = 'Sonuç bulunamadı. Farklı bir arama terimi deneyin.';
+        } else {
+            searchInput.style.border = '';
+            searchInput.title = `${matchCount} sonuç bulundu`;
+        }
+    }
+}
+
+// Enter tuşu ile arama
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchAlgo();
+            }
+        });
+    }
+});

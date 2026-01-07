@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>112 Müdahale Algoritmaları</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Hastane öncesi acil müdahale algoritmaları — hızlı referans, dozlar ve uyarılar.">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="112 Asistan">
+  <link rel="apple-touch-icon" href="img/logo.jpg">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,10 +40,8 @@
     <div style="position: absolute; bottom: 40px; color: #94a3b8; font-size: 11px; font-family: sans-serif; letter-spacing: 1px; font-weight: 600;">
         T.C. SAĞLIK BAKANLIĞI KURUMSAL REHBERİ
     </div>
-</div>
-    </div>
     
-    <div style="position: absolute; bottom: 30px; color: #94a3b8; font-size: 12px; font-family: sans-serif;">
+    <div style="position: absolute; bottom: 20px; color: #94a3b8; font-size: 12px; font-family: sans-serif;">
         © 2026 Hastane Öncesi Bakım Kılavuzu
     </div>
 </div>
@@ -54,17 +59,30 @@
 }
 </style>
 
-<h1>🚑 112 Acil Müdahale</h1>
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+  <h1 style="margin: 0;">🚑 112 Acil Müdahale</h1>
+  <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Tema Değiştir" title="Karanlık/Açık Tema">
+    🌙
+  </button>
+</div>
 <p class="info">Vakaya çıkmadan önce hızlı gözden geçirme amaçlıdır.</p>
 
 <label for="searchInput" class="visually-hidden">Algoritma ara</label>
 <input
   type="text"
   id="searchInput"
-  placeholder="🔍 Algoritma ara (Nöbet, Travma, Anafilaksi...)"
+  placeholder="🔍 Algoritma ara (Nöbet, Travma, Anafilaksi, kalp, çocuk...)"
   onkeyup="searchAlgo()"
+  oninput="searchAlgo()"
   aria-label="Algoritma ara"
 />
+
+<!-- Favoriler Bölümü -->
+<div id="favoritesSection" style="display: none;">
+  <h2 style="margin: 0 0 10px 0; font-size: 1.2rem; color: var(--warning);">⭐ Favorilerim</h2>
+  <div id="favoritesGrid"></div>
+  <p id="noFavorites" style="text-align: center; color: var(--muted); display: none;">Henüz favori eklenmemiş. Algoritmalara ⭐ butonu ile ekleyebilirsiniz.</p>
+</div>
 
 <div class="grid">
   <button data-key="yetiskin" onclick="showGroup('yetiskin')" aria-controls="yetiskin" aria-pressed="false">🧑 Yetişkin</button>

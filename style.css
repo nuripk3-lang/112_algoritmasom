@@ -12,6 +12,66 @@
   --btn-shadow: 0 8px 20px rgba(37,99,235,0.35);
   --radius-lg: 16px;
   --focus-ring: rgba(37,99,235,0.12);
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-start: #0f172a;
+  --bg-end: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --primary-1: #3b82f6;
+  --primary-2: #2563eb;
+  --card-shadow: 0 14px 35px rgba(0,0,0,0.4);
+  --btn-shadow: 0 8px 20px rgba(59,130,246,0.3);
+  --focus-ring: rgba(59,130,246,0.2);
+  --card-bg: #1e293b;
+  --input-bg: #334155;
+}
+
+[data-theme="dark"] body {
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+}
+
+[data-theme="dark"] #searchInput {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid #475569;
+}
+
+[data-theme="dark"] #content,
+[data-theme="dark"] #cprBox,
+[data-theme="dark"] #dozSonuc,
+[data-theme="dark"] .decision-box,
+[data-theme="dark"] .step-box {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .drug-box {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+[data-theme="dark"] .warning-box {
+  background: #78350f;
+  color: #fde68a;
+}
+
+[data-theme="dark"] table {
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] table th {
+  background: #334155;
+  color: var(--text);
+}
+
+[data-theme="dark"] table tr:nth-child(even) {
+  background: #1e293b;
 }
 
 *{box-sizing:border-box}
@@ -39,7 +99,8 @@ h1{ text-align:center; margin-bottom:4px; font-size:28px; }
   border-radius:14px;
   border:none;
   margin:16px 0 20px;
-  background:#fff;
+  background:var(--input-bg);
+  color:var(--text);
   box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 #searchInput:focus-visible{
@@ -82,7 +143,7 @@ button[onclick*="showGroup"]{ background: linear-gradient(135deg,var(--success-1
 .section{ margin-top:22px; }
 
 /* İçerik kartı */
-#content{ background:#fff; padding:20px; border-radius:20px; margin-top:24px; box-shadow:var(--card-shadow); }
+#content{ background:var(--card-bg); padding:20px; border-radius:20px; margin-top:24px; box-shadow:var(--card-shadow); }
 
 /* Adım kutuları */
 .algo-container{ display:flex; flex-direction:column; gap:12px; }
@@ -96,7 +157,7 @@ button[onclick*="showGroup"]{ background: linear-gradient(135deg,var(--success-1
 .back-btn{ background:#4b5563; margin-bottom:15px; padding:10px 20px; display:inline-block; color:#fff; border-radius:12px; border:none; cursor:pointer; }
 
 /* CPR */
-#cprBox{ background:#fff; margin-top:32px; padding:22px; border-radius:22px; box-shadow:0 14px 35px rgba(0,0,0,0.12); text-align:center; }
+#cprBox{ background:var(--card-bg); margin-top:32px; padding:22px; border-radius:22px; box-shadow:var(--card-shadow); text-align:center; }
 #cprTimer{ font-size:48px; font-weight:700; color:var(--danger); margin:14px 0; }
 #cprAlert{ color:#b91c1c; font-weight:600; margin-top:10px; }
 .cpr-controls button{ margin:6px 6px 0 6px; }
@@ -107,6 +168,79 @@ button[onclick*="showGroup"]{ background: linear-gradient(135deg,var(--success-1
 
 /* Responsive container genişliği */
 @media (min-width:600px){ body{ max-width:720px; margin:auto; } }
+
+/* Dark Mode Toggle Button */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-size: 24px;
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Favoriler Butonu Stili */
+.btn-favorite {
+  background: transparent !important;
+  border: 2px solid var(--warning) !important;
+  color: var(--warning) !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+  box-shadow: none !important;
+}
+
+.btn-favorite.active {
+  background: var(--warning) !important;
+  color: white !important;
+}
+
+/* Favoriler Bölümü */
+#favoritesSection {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+}
+
+#favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.favorite-item {
+  padding: 12px;
+  background: var(--input-bg);
+  border-radius: 12px;
+  border: 1px solid var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.favorite-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important; } }

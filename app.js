@@ -1111,21 +1111,50 @@ function stopAllSounds() {
     });
 }
 
+// Manuel splash screen kapatma fonksiyonu
+function closeSplashScreen() {
+    console.log('👆 Kullanıcı splash screen\'e tıkladı');
+    const splash = document.getElementById('splash-screen');
+    if (splash) {
+        splash.style.opacity = '0';
+        splash.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            splash.style.display = 'none';
+            console.log('✅ Splash screen manuel olarak kapatıldı!');
+        }, 300);
+    }
+}
+
 // Sayfa yüklendiğinde Splash Screen'i yönet
 window.addEventListener('load', () => {
+    console.log('🚀 Sayfa yüklendi, splash screen kapatılıyor...');
     const splash = document.getElementById('splash-screen');
     
     if (splash) {
-        // 2.5 saniye sonra ekranı kaldır
+        console.log('✅ Splash screen bulundu, kapatma işlemi başlıyor...');
+        // 1.5 saniye sonra ekranı kaldır (daha hızlı)
         setTimeout(() => {
+            console.log('⏰ Splash screen kapatılıyor...');
             splash.style.opacity = '0';
-            splash.style.transform = 'scale(1.05)'; // Hafif büyüme efektiyle çıkış
+            splash.style.transform = 'scale(1.05)';
             setTimeout(() => {
                 splash.style.display = 'none';
-            }, 800);
-        }, 2500);
+                console.log('✅ Splash screen kapatıldı!');
+            }, 500);
+        }, 1500);
+    } else {
+        console.error('❌ Splash screen elementi bulunamadı!');
     }
 });
+
+// Acil durum: 5 saniye sonra zorla kapat
+setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    if (splash && splash.style.display !== 'none') {
+        console.log('🚨 Acil durum: Splash screen zorla kapatılıyor...');
+        splash.style.display = 'none';
+    }
+}, 5000);
 
 // --- SERVICE WORKER KAYDI (PWA İÇİN ŞART) ---
 if ('serviceWorker' in navigator) {

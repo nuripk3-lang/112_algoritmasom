@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v5';
+const CACHE_NAME = '112-asistan-v6-krup-fix';
 const urlsToCache = [
   './',
   './index.html',
@@ -67,6 +67,15 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // GET istekleri için cache stratejisi uygula
   if (event.request.method === 'GET') {
+    // app.js için her zaman network'ten getir (cache bypass)
+    if (event.request.url.includes('app.js')) {
+      event.respondWith(
+        fetch(event.request.url + '?v=' + Date.now())
+          .catch(() => caches.match(event.request))
+      );
+      return;
+    }
+    
     event.respondWith(
       fetch(event.request)
         .then(response => {

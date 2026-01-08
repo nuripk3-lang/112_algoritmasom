@@ -570,6 +570,8 @@ let html = `
     </div>`;
    // Ses Paneli (Astım, KOAH veya Anafilaksi)
     const currentKey = key.toLowerCase().trim();
+    console.log("🔍 DEBUG: Algorithm key:", currentKey); // Debug
+    
     const sesVerileri = {
     'astim': 'wheezing (Hırıltı)',
     'koah': 'Ronküs (Kaba Ses)',
@@ -577,7 +579,11 @@ let html = `
     'krup': 'Krup Sesi (Havlar Tarzda Öksürük)'
 };
 
+    console.log("🔍 DEBUG: Ses verileri:", sesVerileri); // Debug
+    console.log("🔍 DEBUG: Key bulundu mu?", sesVerileri[currentKey]); // Debug
+
     if (sesVerileri[currentKey]) {
+        console.log("✅ DEBUG: Ses paneli ekleniyor:", currentKey); // Debug
         html += `
         <div style="margin-bottom:15px; background:#fef2f2; padding:15px; border-radius:12px; border:2px solid #fecaca; text-align:center;">
             <p style="margin:0 0 10px 0; font-size:15px; font-weight:bold; color:#b91c1c;">🫁 Patolojik Ses: ${sesVerileri[currentKey]}</p>
@@ -586,6 +592,8 @@ let html = `
                 <button class="back-btn" style="background:#64748b; width:auto; padding:10px 20px; color:white; margin:0; border:none;" onclick="stopAllSounds()">⏹️ Durdur</button>
             </div>
         </div>`;
+    } else {
+        console.log("❌ DEBUG: Ses paneli eklenmedi, key bulunamadı:", currentKey); // Debug
     }
 
     html += `<div class="algo-container">`;
@@ -956,12 +964,30 @@ const stridorSound = new Audio('sound/stridor.mp3');
 const krupSound = new Audio('sound/krup.mp3');
 
 function playSound(type) {
-    console.log("Ses çalınıyor:", type); // Debug mesajı
+    console.log("🔊 Ses çalınıyor:", type); // Debug mesajı
+    alert("Debug: " + type + " sesi çalınacak"); // Görsel debug
     stopAllSounds();
-    if(type === 'astim') wheezingSound.play().catch(e => console.log("Astım sesi hatası:", e));
-    if(type === 'koah') ronkusSound.play().catch(e => console.log("KOAH sesi hatası:", e));
-    if(type === 'anafilaksi') stridorSound.play().catch(e => console.log("Stridor sesi hatası:", e));
-    if(type === 'krup') krupSound.play().catch(e => console.log("Krup sesi hatası:", e));
+    
+    if(type === 'astim') {
+        console.log("🫁 Astım sesi başlatılıyor...");
+        wheezingSound.play().catch(e => console.log("Astım sesi hatası:", e));
+    }
+    if(type === 'koah') {
+        console.log("🫁 KOAH sesi başlatılıyor...");
+        ronkusSound.play().catch(e => console.log("KOAH sesi hatası:", e));
+    }
+    if(type === 'anafilaksi') {
+        console.log("🫁 Stridor sesi başlatılıyor...");
+        stridorSound.play().catch(e => console.log("Stridor sesi hatası:", e));
+    }
+    if(type === 'krup') {
+        console.log("🫁 KRUP sesi başlatılıyor...");
+        alert("KRUP SESİ ÇALINIYOR!"); // Ekstra debug
+        krupSound.play().catch(e => {
+            console.log("Krup sesi hatası:", e);
+            alert("Krup ses hatası: " + e.message);
+        });
+    }
 }
 
 function stopAllSounds() {

@@ -356,6 +356,740 @@ const quizQuestions = [
         options: ["1:5.000", "1:15.000", "1:50.000", "1:100.000"],
         correct: 2,
         explanation: "Malign hipertermi insidansı yaklaşık 1:50.000'dir."
+    },
+    
+    // EK KOLAY SORULAR (50-150)
+    {
+        level: "kolay",
+        question: "Defibrilasyon için hangi ritim gereklidir?",
+        options: ["Asistoli", "VF/VT", "Bradikardi", "Normal ritim"],
+        correct: 1,
+        explanation: "Defibrilasyon sadece VF (ventriküler fibrilasyon) ve nabızsız VT'de uygulanır."
+    },
+    {
+        level: "kolay",
+        question: "Oksijen satürasyonu hedefi nedir?",
+        options: ["85-90%", "90-94%", "94-98%", "98-100%"],
+        correct: 2,
+        explanation: "Normal oksijen satürasyonu hedefi %94-98 arasındadır."
+    },
+    {
+        level: "kolay",
+        question: "Travmalı hastada öncelik nedir?",
+        options: ["Ağrı kontrolü", "C-spine koruması", "Damar yolu", "Röntgen çekimi"],
+        correct: 1,
+        explanation: "Travmalı hastada servikal omurga koruması önceliklidir."
+    },
+    {
+        level: "kolay",
+        question: "Yanık hastasında ilk müdahale nedir?",
+        options: ["Merhem sürmek", "Soğuk su", "Buz uygulamak", "Antibiyotik"],
+        correct: 1,
+        explanation: "Yanık hastasında ilk müdahale soğuk (ılık) su ile soğutmadır."
+    },
+    {
+        level: "kolay",
+        question: "Astım atağında ilk ilaç nedir?",
+        options: ["Steroid", "Salbutamol", "Antibiyotik", "Morfin"],
+        correct: 1,
+        explanation: "Astım atağında ilk tercih bronkodilatör olan salbutamoldür."
+    },
+    {
+        level: "kolay",
+        question: "Hipoglisemi belirtisi hangisidir?",
+        options: ["Yüksek ateş", "Terleme", "Yavaş nabız", "Hipertansiyon"],
+        correct: 1,
+        explanation: "Hipoglisemide terleme, titreme, konfüzyon görülür."
+    },
+    {
+        level: "kolay",
+        question: "Normal çocuk kalp hızı (1-2 yaş) nedir?",
+        options: ["60-100/dk", "80-130/dk", "100-160/dk", "120-180/dk"],
+        correct: 2,
+        explanation: "1-2 yaş çocukta normal kalp hızı 100-160/dakikadır."
+    },
+    {
+        level: "kolay",
+        question: "Anafilaksi tedavisinde adrenalin dozu nedir?",
+        options: ["0.1 mg", "0.3-0.5 mg", "1 mg", "2 mg"],
+        correct: 1,
+        explanation: "Anafilakside adrenalin dozu 0.3-0.5 mg IM'dir."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta bradikardi sınırı nedir?",
+        options: ["<50/dk", "<60/dk", "<70/dk", "<80/dk"],
+        correct: 2,
+        explanation: "Çocuklarda bradikardi genellikle <70/dk olarak kabul edilir."
+    },
+    {
+        level: "kolay",
+        question: "Göğüs kompresyonu hızı nedir?",
+        options: ["80-100/dk", "100-120/dk", "120-140/dk", "140-160/dk"],
+        correct: 1,
+        explanation: "Göğüs kompresyonu hızı 100-120/dakika olmalıdır."
+    },
+    {
+        level: "kolay",
+        question: "Şok pozisyonu nasıldır?",
+        options: ["Baş yukarı", "Düz yatar", "Bacaklar yukarı", "Yan yatar"],
+        correct: 2,
+        explanation: "Şokta bacaklar 15-30 derece yükseltilir (Trendelenburg)."
+    },
+    {
+        level: "kolay",
+        question: "Bilinçsiz hastada havayolu nasıl açılır?",
+        options: ["Baş geriye eğme", "Çene kaldırma", "Her ikisi", "Entübasyon"],
+        correct: 2,
+        explanation: "Bilinçsiz hastada baş geriye eğme-çene kaldırma manevrası yapılır."
+    },
+    {
+        level: "kolay",
+        question: "Krup hastalığının tipik sesi nedir?",
+        options: ["Wheezing", "Stridor", "Ronküs", "Ral"],
+        correct: 1,
+        explanation: "Krup hastalığında tipik inspiratuar stridor duyulur."
+    },
+    {
+        level: "kolay",
+        question: "Epipen nasıl uygulanır?",
+        options: ["IV", "IM (uyluk)", "SC", "Oral"],
+        correct: 1,
+        explanation: "Epipen uyluk kasına (vastus lateralis) IM uygulanır."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta sıvı resüsitasyonu dozu nedir?",
+        options: ["10 ml/kg", "20 ml/kg", "30 ml/kg", "40 ml/kg"],
+        correct: 1,
+        explanation: "Çocukta sıvı resüsitasyonu 20 ml/kg kristaloid ile başlanır."
+    },
+    {
+        level: "kolay",
+        question: "Hipotermide vücut sıcaklığı kaç derecenin altındadır?",
+        options: ["<37°C", "<36°C", "<35°C", "<34°C"],
+        correct: 2,
+        explanation: "Hipotermi vücut sıcaklığının <35°C olmasıdır."
+    },
+    {
+        level: "kolay",
+        question: "Travmalı hastada C-spine nasıl korunur?",
+        options: ["Boyunluk", "Manuel stabilizasyon", "Her ikisi", "Gerek yok"],
+        correct: 2,
+        explanation: "C-spine hem manuel stabilizasyon hem boyunluk ile korunur."
+    },
+    {
+        level: "kolay",
+        question: "Göğüs kompresyonunda eller nereye konur?",
+        options: ["Üst sternum", "Alt sternum", "Orta sternum", "Xiphoid"],
+        correct: 2,
+        explanation: "Eller sternumun alt yarısına, meme başları arasına konur."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta adrenalin dozu nedir?",
+        options: ["0.01 mg/kg", "0.1 mg/kg", "1 mg/kg", "10 mg/kg"],
+        correct: 0,
+        explanation: "Çocukta adrenalin dozu 0.01 mg/kg (0.1 ml/kg 1:10.000)'dır."
+    },
+    {
+        level: "kolay",
+        question: "Astımda nebül nasıl verilir?",
+        options: ["Yavaş", "Hızlı", "O2 ile", "Hava ile"],
+        correct: 2,
+        explanation: "Nebül oksijen ile 6-8 L/dk akımla verilir."
+    },
+    {
+        level: "kolay",
+        question: "Yanık alanı nasıl hesaplanır?",
+        options: ["Kural 9", "Kural 10", "Kural 11", "Kural 15"],
+        correct: 0,
+        explanation: "Yanık alanı 'Kural 9' ile hesaplanır (her vücut bölgesi %9)."
+    },
+    {
+        level: "kolay",
+        question: "Zehirlenme şüphesinde hangi numara aranır?",
+        options: ["112", "114", "155", "110"],
+        correct: 1,
+        explanation: "Zehirlenme şüphesinde UZEM (114) aranır."
+    },
+    {
+        level: "kolay",
+        question: "Diyabetik hastada şeker yüksekliği belirtisi nedir?",
+        options: ["Terleme", "Susuzluk", "Titreme", "Baş dönmesi"],
+        correct: 1,
+        explanation: "Hiperglisemide susuzluk, sık idrara çıkma, yorgunluk görülür."
+    },
+    {
+        level: "kolay",
+        question: "Suda boğulma durumunda ilk yapılacak nedir?",
+        options: ["Sıvı çıkarmak", "Solunum kontrolü", "Kalp masajı", "Isıtmak"],
+        correct: 1,
+        explanation: "Suda boğulmada önce solunum yolu açıklığı kontrol edilir."
+    },
+    {
+        level: "kolay",
+        question: "Gebelikte hangi pozisyon tercih edilir?",
+        options: ["Sırtüstü", "Sol yan", "Sağ yan", "Oturur"],
+        correct: 1,
+        explanation: "Gebelikte sol yan pozisyonu uteroplasental akımı artırır."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta defibrilasyon dozu nedir?",
+        options: ["1 J/kg", "2 J/kg", "4 J/kg", "10 J/kg"],
+        correct: 1,
+        explanation: "Çocukta defibrilasyon dozu 2 J/kg ile başlanır."
+    },
+    {
+        level: "kolay",
+        question: "Hipoglisemide hangi ilaç verilir?",
+        options: ["İnsülin", "Glukoz", "Adrenalin", "Atropin"],
+        correct: 1,
+        explanation: "Hipoglisemide %50 dekstroz veya glukagon verilir."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta IO yeri neresidir?",
+        options: ["Humerus", "Tibia", "Femur", "Radius"],
+        correct: 1,
+        explanation: "Çocukta IO genellikle tibia proksimaline uygulanır."
+    },
+    {
+        level: "kolay",
+        question: "Astım atağında hangi pozisyon verilir?",
+        options: ["Yatar", "Oturur", "Yan yatar", "Baş aşağı"],
+        correct: 1,
+        explanation: "Astım atağında hasta oturur pozisyonda tutulur."
+    },
+    {
+        level: "kolay",
+        question: "Çocukta normal solunum sayısı (1 yaş) nedir?",
+        options: ["12-20/dk", "20-30/dk", "30-40/dk", "40-50/dk"],
+        correct: 2,
+        explanation: "1 yaş çocukta normal solunum sayısı 30-40/dakikadır."
+    },
+    
+    // EK ORTA SORULAR (151-200)
+    {
+        level: "orta",
+        question: "STEMI'de fibrinolitik hedef süresi nedir?",
+        options: ["30 dakika", "60 dakika", "90 dakika", "120 dakika"],
+        correct: 0,
+        explanation: "STEMI'de fibrinolitik tedavi hedef süresi 30 dakikadır."
+    },
+    {
+        level: "orta",
+        question: "Çocukta hipotansiyon sınırı (1-10 yaş) nedir?",
+        options: ["<70 mmHg", "<70+(2×yaş)", "<80 mmHg", "<90 mmHg"],
+        correct: 1,
+        explanation: "Çocukta hipotansiyon sınırı <70+(2×yaş) mmHg'dır."
+    },
+    {
+        level: "orta",
+        question: "Preeklampside MgSO4 idame dozu nedir?",
+        options: ["0.5-1 gr/saat", "1-2 gr/saat", "2-3 gr/saat", "3-4 gr/saat"],
+        correct: 1,
+        explanation: "Preeklampside MgSO4 idame dozu 1-2 gr/saat'tir."
+    },
+    {
+        level: "orta",
+        question: "Krup tedavisinde deksametazon dozu nedir?",
+        options: ["0.15 mg/kg", "0.6 mg/kg", "1 mg/kg", "2 mg/kg"],
+        correct: 1,
+        explanation: "Krup tedavisinde deksametazon 0.6 mg/kg tek doz verilir."
+    },
+    {
+        level: "orta",
+        question: "Hipotermik arrest'te şok sınırı nedir?",
+        options: ["1 şok", "2 şok", "3 şok", "5 şok"],
+        correct: 2,
+        explanation: "Hipotermik arrest'te (<30°C) şok sayısı 3 ile sınırlanır."
+    },
+    {
+        level: "orta",
+        question: "Çocukta status epilepticus süresi nedir?",
+        options: ["5 dakika", "10 dakika", "15 dakika", "30 dakika"],
+        correct: 0,
+        explanation: "Çocukta status epilepticus 5 dakika süren nöbet olarak tanımlanır."
+    },
+    {
+        level: "orta",
+        question: "Adenozin'in etki süresi ne kadardır?",
+        options: ["10-20 saniye", "1-2 dakika", "5-10 dakika", "15-30 dakika"],
+        correct: 0,
+        explanation: "Adenozin'in etki süresi çok kısa, 10-20 saniyedir."
+    },
+    {
+        level: "orta",
+        question: "Çocukta amiodaron dozu nedir?",
+        options: ["5 mg/kg", "10 mg/kg", "15 mg/kg", "20 mg/kg"],
+        correct: 0,
+        explanation: "Çocukta amiodaron dozu 5 mg/kg IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Yanık hastasında Parkland formülü nedir?",
+        options: ["2 ml/kg/%", "3 ml/kg/%", "4 ml/kg/%", "5 ml/kg/%"],
+        correct: 2,
+        explanation: "Parkland formülü: 4 ml/kg/% yanık alanı (ilk 24 saat)."
+    },
+    {
+        level: "orta",
+        question: "Çocukta midazolam dozu (nöbet) nedir?",
+        options: ["0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg", "1 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta midazolam dozu 0.2 mg/kg IV/IO'dur."
+    },
+    {
+        level: "orta",
+        question: "Hipoglisemide dekstroz dozu nedir?",
+        options: ["0.5-1 gr/kg", "1-2 gr/kg", "2-3 gr/kg", "3-4 gr/kg"],
+        correct: 0,
+        explanation: "Hipoglisemide dekstroz dozu 0.5-1 gr/kg'dır."
+    },
+    {
+        level: "orta",
+        question: "Çocukta atropin dozu nedir?",
+        options: ["0.01 mg/kg", "0.02 mg/kg", "0.05 mg/kg", "0.1 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta atropin dozu 0.02 mg/kg (min 0.1 mg)'dır."
+    },
+    {
+        level: "orta",
+        question: "Astımda magnezyum dozu nedir?",
+        options: ["25-50 mg/kg", "50-75 mg/kg", "75-100 mg/kg", "100-125 mg/kg"],
+        correct: 0,
+        explanation: "Astımda magnezyum sülfat dozu 25-50 mg/kg'dır."
+    },
+    {
+        level: "orta",
+        question: "Çocukta lorazepam dozu nedir?",
+        options: ["0.05 mg/kg", "0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta lorazepam dozu 0.1 mg/kg IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Sepsis tanısında qSOFA kriterleri kaç tanedir?",
+        options: ["2", "3", "4", "5"],
+        correct: 1,
+        explanation: "qSOFA 3 kriterden oluşur: GKS<15, SBP<100, SS≥22."
+    },
+    {
+        level: "orta",
+        question: "Çocukta dopamin dozu nedir?",
+        options: ["2-5 mcg/kg/dk", "5-10 mcg/kg/dk", "10-20 mcg/kg/dk", "20-30 mcg/kg/dk"],
+        correct: 1,
+        explanation: "Çocukta dopamin dozu 5-10 mcg/kg/dk ile başlanır."
+    },
+    {
+        level: "orta",
+        question: "Hiperkalsemi tedavisinde furosemid dozu nedir?",
+        options: ["0.5-1 mg/kg", "1-2 mg/kg", "2-3 mg/kg", "3-4 mg/kg"],
+        correct: 1,
+        explanation: "Hiperkalsemi tedavisinde furosemid 1-2 mg/kg verilir."
+    },
+    {
+        level: "orta",
+        question: "Çocukta naloksan dozu nedir?",
+        options: ["0.01 mg/kg", "0.1 mg/kg", "1 mg/kg", "2 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta naloksan dozu 0.1 mg/kg IV/IO'dur."
+    },
+    {
+        level: "orta",
+        question: "Astımda prednizolon dozu nedir?",
+        options: ["0.5-1 mg/kg", "1-2 mg/kg", "2-3 mg/kg", "3-4 mg/kg"],
+        correct: 1,
+        explanation: "Astımda prednizolon dozu 1-2 mg/kg'dır."
+    },
+    {
+        level: "orta",
+        question: "Çocukta fentanil dozu nedir?",
+        options: ["0.5-1 mcg/kg", "1-2 mcg/kg", "2-3 mcg/kg", "3-5 mcg/kg"],
+        correct: 1,
+        explanation: "Çocukta fentanil dozu 1-2 mcg/kg IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Hipoglisemide glukagon dozu nedir?",
+        options: ["0.5 mg", "1 mg", "1.5 mg", "2 mg"],
+        correct: 1,
+        explanation: "Hipoglisemide glukagon dozu 1 mg IM'dir."
+    },
+    {
+        level: "orta",
+        question: "Çocukta ketamin dozu nedir?",
+        options: ["0.5-1 mg/kg", "1-2 mg/kg", "2-3 mg/kg", "3-4 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta ketamin dozu 1-2 mg/kg IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Anafilakside H1 antihistaminik dozu nedir?",
+        options: ["0.5-1 mg/kg", "1-2 mg/kg", "2-3 mg/kg", "3-4 mg/kg"],
+        correct: 1,
+        explanation: "Anafilakside difenhidramin 1-2 mg/kg verilir."
+    },
+    {
+        level: "orta",
+        question: "Çocukta morfin dozu nedir?",
+        options: ["0.05-0.1 mg/kg", "0.1-0.2 mg/kg", "0.2-0.3 mg/kg", "0.3-0.5 mg/kg"],
+        correct: 1,
+        explanation: "Çocukta morfin dozu 0.1-0.2 mg/kg IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Hiperkalsemide kalsiyum glukonat dozu nedir?",
+        options: ["50-100 mg/kg", "100-200 mg/kg", "200-300 mg/kg", "300-400 mg/kg"],
+        correct: 1,
+        explanation: "Hiperkalsemide kalsiyum glukonat 100-200 mg/kg verilir."
+    },
+    
+    // EK ZOR SORULAR (201-300)
+    {
+        level: "zor",
+        question: "Malign hipertermi tedavisinde dantrolen yükleme dozu nedir?",
+        options: ["1-2.5 mg/kg", "2.5-5 mg/kg", "5-10 mg/kg", "10-15 mg/kg"],
+        correct: 0,
+        explanation: "Malign hipertermide dantrolen yükleme dozu 1-2.5 mg/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Organofosfor zehirlenmesinde atropin dozu nedir?",
+        options: ["0.05 mg/kg", "0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg"],
+        correct: 0,
+        explanation: "Organofosfor zehirlenmesinde atropin 0.05 mg/kg ile başlanır."
+    },
+    {
+        level: "zor",
+        question: "Hiperosmolar hiperglisemik durumda sıvı açığı nasıl hesaplanır?",
+        options: ["0.6×kg×(Na-140)", "0.6×kg×(Glu-100)/18", "Her ikisi", "Hiçbiri"],
+        correct: 2,
+        explanation: "HHS'de hem sodyum hem glukoz bazlı hesaplama yapılır."
+    },
+    {
+        level: "zor",
+        question: "Aort diseksiyonu Stanford sınıflamasında Tip B nedir?",
+        options: ["Çıkan aort", "İnen aort", "Aort arkı", "Abdominal aort"],
+        correct: 1,
+        explanation: "Stanford Tip B sadece inen aortu tutar."
+    },
+    {
+        level: "zor",
+        question: "Çocukta sepsis tanısında PELOD skoru kaç organa bakar?",
+        options: ["4", "5", "6", "7"],
+        correct: 1,
+        explanation: "PELOD skoru 5 organ sistemini değerlendirir."
+    },
+    {
+        level: "zor",
+        question: "Hiponatremi düzeltmesinde güvenli hız nedir?",
+        options: ["<6 mEq/L/gün", "<8 mEq/L/gün", "<10 mEq/L/gün", "<12 mEq/L/gün"],
+        correct: 3,
+        explanation: "Hiponatremi düzeltmesi <12 mEq/L/gün olmalıdır."
+    },
+    {
+        level: "zor",
+        question: "Çocukta diabetik ketoasidoz sıvı hızı nedir?",
+        options: ["1.5×idame", "2×idame", "2.5×idame", "3×idame"],
+        correct: 0,
+        explanation: "DKA'da sıvı hızı 1.5×idame ile başlanır."
+    },
+    {
+        level: "zor",
+        question: "Malign hipertermi mortalite oranı nedir?",
+        options: ["%5-10", "%10-20", "%20-30", "%30-40"],
+        correct: 1,
+        explanation: "Malign hipertermi mortalite oranı %10-20'dir."
+    },
+    {
+        level: "zor",
+        question: "Siyanür zehirlenmesinde hidroksikobalomin maksimum dozu nedir?",
+        options: ["5 g", "10 g", "15 g", "20 g"],
+        correct: 1,
+        explanation: "Hidroksikobalomin maksimum dozu 10 g'dır."
+    },
+    {
+        level: "zor",
+        question: "Rhabdomyolizde CK yüksekliği hangi düzeyde tehlikelidir?",
+        options: [">1.000 U/L", ">5.000 U/L", ">10.000 U/L", ">50.000 U/L"],
+        correct: 3,
+        explanation: "CK >50.000 U/L böbrek yetmezliği riski yüksektir."
+    },
+    {
+        level: "zor",
+        question: "Hipotermide rewarming hızı nedir?",
+        options: ["0.5-1°C/saat", "1-2°C/saat", "2-3°C/saat", "3-4°C/saat"],
+        correct: 1,
+        explanation: "Hipotermide rewarming hızı 1-2°C/saat olmalıdır."
+    },
+    {
+        level: "zor",
+        question: "Çocukta epiglotit mortalite oranı nedir?",
+        options: ["%1", "%5", "%10", "%15"],
+        correct: 0,
+        explanation: "Çocukta epiglotit mortalite oranı %1'dir."
+    },
+    {
+        level: "zor",
+        question: "Akut aort diseksiyonunda D-dimer sensitivitesi nedir?",
+        options: ["%85", "%90", "%95", "%99"],
+        correct: 2,
+        explanation: "Akut aort diseksiyonunda D-dimer sensitivitesi %95'tir."
+    },
+    {
+        level: "zor",
+        question: "Hiperkalsemik krizde bifosfonat dozu nedir?",
+        options: ["30 mg", "60 mg", "90 mg", "120 mg"],
+        correct: 2,
+        explanation: "Hiperkalsemik krizde pamidronat 90 mg verilir."
+    },
+    {
+        level: "zor",
+        question: "Çocukta status epilepticus refrakter süresi nedir?",
+        options: ["30 dakika", "60 dakika", "90 dakika", "120 dakika"],
+        correct: 1,
+        explanation: "Çocukta refrakter status epilepticus 60 dakikadır."
+    },
+    {
+        level: "zor",
+        question: "Akut pankreatitte Ranson skoru kaç puan kötü prognoz göstergesidir?",
+        options: [">3", ">5", ">7", ">9"],
+        correct: 0,
+        explanation: "Ranson skoru >3 puan kötü prognoz göstergesidir."
+    },
+    {
+        level: "zor",
+        question: "Çocukta sepsis tanısında hangi laktat düzeyi kritiktir?",
+        options: [">2 mmol/L", ">4 mmol/L", ">6 mmol/L", ">8 mmol/L"],
+        correct: 1,
+        explanation: "Çocukta laktat >4 mmol/L septik şok göstergesidir."
+    },
+    {
+        level: "zor",
+        question: "Hiponatremi düzeltmesinde osmotik demiyelinizasyon riski hangi hızda artar?",
+        options: [">8 mEq/L/gün", ">10 mEq/L/gün", ">12 mEq/L/gün", ">15 mEq/L/gün"],
+        correct: 2,
+        explanation: "Osmotik demiyelinizasyon riski >12 mEq/L/gün düzeltme hızında artar."
+    },
+    {
+        level: "zor",
+        question: "Çocukta diabetik ketoasidoz beyin ödemi riski hangi faktörle artar?",
+        options: ["Hızlı sıvı", "Yavaş insülin", "Bikarbonat", "Hepsi"],
+        correct: 3,
+        explanation: "DKA'da beyin ödemi riski hızlı sıvı, bikarbonat ve ani glukoz düşüşü ile artar."
+    },
+    {
+        level: "zor",
+        question: "Malign hipertermi tedavisinde dantrolen maksimum dozu nedir?",
+        options: ["5 mg/kg", "10 mg/kg", "15 mg/kg", "20 mg/kg"],
+        correct: 1,
+        explanation: "Malign hipertermide dantrolen maksimum dozu 10 mg/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Organofosfor zehirlenmesinde pralidoksim dozu nedir?",
+        options: ["15-25 mg/kg", "25-50 mg/kg", "50-75 mg/kg", "75-100 mg/kg"],
+        correct: 1,
+        explanation: "Organofosfor zehirlenmesinde pralidoksim dozu 25-50 mg/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Hiperosmolar hiperglisemik durumda osmolalite sınırı nedir?",
+        options: [">300 mOsm/kg", ">320 mOsm/kg", ">340 mOsm/kg", ">360 mOsm/kg"],
+        correct: 1,
+        explanation: "HHS'de osmolalite >320 mOsm/kg olarak tanımlanır."
+    },
+    {
+        level: "zor",
+        question: "Aort diseksiyonu DeBakey sınıflamasında Tip III nedir?",
+        options: ["Çıkan aort", "Aort arkı", "İnen aort", "Abdominal aort"],
+        correct: 2,
+        explanation: "DeBakey Tip III sadece inen aortu tutar."
+    },
+    {
+        level: "zor",
+        question: "Çocukta defibrilasyon maksimum dozu nedir?",
+        options: ["4 J/kg", "6 J/kg", "8 J/kg", "10 J/kg"],
+        correct: 3,
+        explanation: "Çocukta defibrilasyon maksimum dozu 10 J/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Metanol zehirlenmesinde fomepizol dozu nedir?",
+        options: ["10 mg/kg", "15 mg/kg", "20 mg/kg", "25 mg/kg"],
+        correct: 1,
+        explanation: "Metanol zehirlenmesinde fomepizol yükleme dozu 15 mg/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Tension pnömotoraks'ta hangi interkostal aralık tercih edilir?",
+        options: ["2. IKA", "3. IKA", "4. IKA", "5. IKA"],
+        correct: 0,
+        explanation: "Tension pnömotoraks'ta 2. interkostal aralık midklaviküler hattan tercih edilir."
+    },
+    {
+        level: "zor",
+        question: "Kardiyak tamponad'da Beck triadı nedir?",
+        options: ["JVD, hipotansiyon, kalp sesleri azalması", "Taşikardi, hipertansiyon, dispne", "Bradikardi, hipertansiyon, düzensiz solunum", "Ateş, taşikardi, hipotansiyon"],
+        correct: 0,
+        explanation: "Beck triadı: JVD, hipotansiyon ve kalp seslerinde azalma."
+    },
+    {
+        level: "zor",
+        question: "Hiperkalsemi tedavisinde bifosfonat etkisi ne zaman başlar?",
+        options: ["2-4 saat", "12-24 saat", "24-48 saat", "48-72 saat"],
+        correct: 2,
+        explanation: "Bifosfonatların hiperkalsemi üzerine etkisi 24-48 saatte başlar."
+    },
+    {
+        level: "zor",
+        question: "Çocukta sepsis tanısında hangi skor kullanılır?",
+        options: ["SOFA", "qSOFA", "PELOD", "PRISM"],
+        correct: 2,
+        explanation: "Çocukta sepsis tanısında PELOD (Pediatric Logistic Organ Dysfunction) skoru kullanılır."
+    },
+    {
+        level: "zor",
+        question: "Akut böbrek yetmezliğinde RIFLE sınıflamasında 'I' nedir?",
+        options: ["Injury", "Insufficiency", "Ischemia", "Inflammation"],
+        correct: 0,
+        explanation: "RIFLE sınıflamasında 'I' Injury (yaralanma) anlamına gelir."
+    },
+    {
+        level: "zor",
+        question: "Rhabdomyolizde CK düzeyi hangi değerin üzerinde tanı koydurur?",
+        options: [">1.000 U/L", ">5.000 U/L", ">10.000 U/L", ">50.000 U/L"],
+        correct: 1,
+        explanation: "Rhabdomyoliz tanısı için CK >5.000 U/L olmalıdır."
+    },
+    {
+        level: "zor",
+        question: "Hipotermik arrest'te hangi sıcaklıkta kardiyak arrest riski en yüksektir?",
+        options: ["<35°C", "<32°C", "<28°C", "<25°C"],
+        correct: 2,
+        explanation: "Hipotermide <28°C'de kardiyak arrest riski en yüksektir."
+    },
+    {
+        level: "zor",
+        question: "Çocukta status epilepticus mortalite oranı nedir?",
+        options: ["%1-3", "%3-5", "%5-10", "%10-15"],
+        correct: 1,
+        explanation: "Çocukta status epilepticus mortalite oranı %3-5'tir."
+    },
+    {
+        level: "zor",
+        question: "Akut pankreatitte Balthazar CT skorunda Grade E nedir?",
+        options: ["Normal pankreas", "Fokal büyüme", "Peripankreatik sıvı", "Nekroz >50%"],
+        correct: 3,
+        explanation: "Balthazar Grade E pankreasta nekroz >50% olmasıdır."
+    },
+    {
+        level: "zor",
+        question: "Siyanür zehirlenmesinde laktat/piruvat oranı nasıldır?",
+        options: ["Normal", "Düşük", "Yüksek", "Değişken"],
+        correct: 2,
+        explanation: "Siyanür zehirlenmesinde laktat/piruvat oranı yüksektir."
+    },
+    {
+        level: "zor",
+        question: "Malign hipertermi insidansı nedir?",
+        options: ["1:5.000", "1:15.000", "1:50.000", "1:100.000"],
+        correct: 2,
+        explanation: "Malign hipertermi insidansı yaklaşık 1:50.000'dir."
+    },
+    {
+        level: "zor",
+        question: "Crush sendromunda kompartman basıncı sınırı nedir?",
+        options: [">20 mmHg", ">30 mmHg", ">40 mmHg", ">50 mmHg"],
+        correct: 1,
+        explanation: "Kompartman sendromunda basınç >30 mmHg tehlikelidir."
+    },
+    {
+        level: "zor",
+        question: "Hipotermide J (Osborn) dalgası hangi derivasyonlarda görülür?",
+        options: ["V1-V3", "V4-V6", "II,III,aVF", "Tüm derivasyonlar"],
+        correct: 3,
+        explanation: "J dalgası genellikle tüm derivasyonlarda görülebilir."
+    },
+    {
+        level: "zor",
+        question: "Çocukta epiglotit'te hangi antibiyotik tercih edilir?",
+        options: ["Ampisilin", "Seftriakson", "Vankomisin", "Klindamisin"],
+        correct: 1,
+        explanation: "Epiglotit'te seftriakson veya sefotaksim tercih edilir."
+    },
+    {
+        level: "zor",
+        question: "Akut aort diseksiyonunda hedef sistolik KB nedir?",
+        options: ["<100 mmHg", "<120 mmHg", "<140 mmHg", "<160 mmHg"],
+        correct: 1,
+        explanation: "Aort diseksiyonunda hedef sistolik KB <120 mmHg'dır."
+    },
+    {
+        level: "zor",
+        question: "Hiperkalsemik krizde hemodiyaliz endikasyonu nedir?",
+        options: [">12 mg/dL", ">14 mg/dL", ">16 mg/dL", ">18 mg/dL"],
+        correct: 2,
+        explanation: "Kalsiyum >16 mg/dL'de hemodiyaliz düşünülür."
+    },
+    {
+        level: "zor",
+        question: "Çocukta status epilepticus'ta fosphenytoin dozu nedir?",
+        options: ["15-20 mg PE/kg", "20-25 mg PE/kg", "25-30 mg PE/kg", "30-35 mg PE/kg"],
+        correct: 0,
+        explanation: "Fosphenytoin dozu 15-20 mg PE/kg'dır."
+    },
+    {
+        level: "zor",
+        question: "Akut pankreatitte lipaz yüksekliği kaç kat tanı koydurur?",
+        options: [">2 kat", ">3 kat", ">4 kat", ">5 kat"],
+        correct: 1,
+        explanation: "Lipaz >3 kat yükseklik akut pankreatit tanısı koydurur."
+    },
+    {
+        level: "zor",
+        question: "Çocukta sepsis'te hangi laktat düzeyi kötü prognoz göstergesidir?",
+        options: [">2 mmol/L", ">4 mmol/L", ">6 mmol/L", ">8 mmol/L"],
+        correct: 1,
+        explanation: "Çocukta laktat >4 mmol/L kötü prognoz göstergesidir."
+    },
+    {
+        level: "zor",
+        question: "Hiponatremi düzeltmesinde hipertonik salin konsantrasyonu nedir?",
+        options: ["%1.5", "%3", "%5", "%10"],
+        correct: 1,
+        explanation: "Hiponatremi düzeltmesinde %3 hipertonik salin kullanılır."
+    },
+    {
+        level: "zor",
+        question: "Çocukta diabetik ketoasidoz'da insülin dozu nedir?",
+        options: ["0.05 Ü/kg/saat", "0.1 Ü/kg/saat", "0.15 Ü/kg/saat", "0.2 Ü/kg/saat"],
+        correct: 1,
+        explanation: "DKA'da insülin dozu 0.1 Ü/kg/saat'tir."
+    },
+    {
+        level: "zor",
+        question: "Malign hipertermi tedavisinde soğutma hedefi nedir?",
+        options: ["<37°C", "<38°C", "<39°C", "<40°C"],
+        correct: 1,
+        explanation: "Malign hipertermide soğutma hedefi <38°C'dir."
+    },
+    {
+        level: "zor",
+        question: "Organofosfor zehirlenmesinde pralidoksim maksimum dozu nedir?",
+        options: ["1 g", "2 g", "3 g", "4 g"],
+        correct: 1,
+        explanation: "Pralidoksim maksimum dozu 2 g'dır."
+    },
+    {
+        level: "zor",
+        question: "Hiperosmolar hiperglisemik durumda mortalite oranı nedir?",
+        options: ["%5-15", "%15-25", "%25-35", "%35-45"],
+        correct: 0,
+        explanation: "HHS mortalite oranı %5-15'tir."
     }
 ];
 
@@ -2315,1787 +3049,128 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-    {
-        level: "kolay",
-        question: "Defibrilasyon için hangi ritim gereklidir?",
-        options: ["Asistoli", "VF/VT", "Bradikardi", "Normal ritim"],
-        correct: 1,
-        explanation: "Defibrilasyon sadece VF (ventriküler fibrilasyon) ve nabızsız VT'de uygulanır."
-    },
-    {
-        level: "kolay",
-        question: "Oksijen satürasyonu hedefi nedir?",
-        options: ["85-90%", "90-94%", "94-98%", "98-100%"],
-        correct: 2,
-        explanation: "Normal oksijen satürasyonu hedefi %94-98 arasındadır."
-    },
-    {
-        level: "kolay",
-        question: "Travmalı hastada öncelik nedir?",
-        options: ["Ağrı kontrolü", "C-spine koruması", "Damar yolu", "Röntgen çekimi"],
-        correct: 1,
-        explanation: "Travmalı hastada servikal omurga koruması önceliklidir."
-    },
-    {
-        level: "kolay",
-        question: "Yanık hastasında ilk müdahale nedir?",
-        options: ["Merhem sürmek", "Soğuk su", "Buz uygulamak", "Antibiyotik"],
-        correct: 1,
-        explanation: "Yanık hastasında ilk müdahale soğuk (ılık) su ile soğutmadır."
-    },
-    {
-        level: "kolay",
-        question: "Astım atağında ilk ilaç nedir?",
-        options: ["Steroid", "Salbutamol", "Adrenalin", "Antihistaminik"],
-        correct: 1,
-        explanation: "Astım atağında ilk tercih salbutamol (bronkodilatör)dür."
-    },
-    {
-        level: "kolay",
-        question: "Nöbet geçiren hastada yapılmaması gereken nedir?",
-        options: ["Yan yatırmak", "Ağza cisim sokmak", "Güvenli ortam", "Zaman ölçmek"],
-        correct: 1,
-        explanation: "Nöbet sırasında ağza hiçbir cisim sokulmamalıdır."
-    },
-    {
-        level: "kolay",
-        question: "Hipertansif kriz sınırı nedir?",
-        options: ["140/90 mmHg", "160/100 mmHg", "180/110 mmHg", "200/120 mmHg"],
-        correct: 2,
-        explanation: "Hipertansif kriz genellikle 180/110 mmHg üzeri kabul edilir."
-    },
-    {
-        level: "kolay",
-        question: "Göğüs ağrısında ilk yapılacak tetkik nedir?",
-        options: ["Kan tahlili", "EKG", "Röntgen", "Ekokardiyografi"],
-        correct: 1,
-        explanation: "Göğüs ağrısında ilk yapılacak tetkik 12 derivasyonlu EKG'dir."
-    },
-    {
-        level: "kolay",
-        question: "Hipoglisemide kan şekeri sınırı nedir?",
-        options: ["<50 mg/dL", "<70 mg/dL", "<90 mg/dL", "<110 mg/dL"],
-        correct: 1,
-        explanation: "Hipoglisemi genellikle kan şekeri <70 mg/dL olarak tanımlanır."
-    },
-    {
-        level: "kolay",
-        question: "Zehirlenme şüphesinde aranacak numara nedir?",
-        options: ["112", "114", "155", "110"],
-        correct: 1,
-        explanation: "Zehirlenme şüphesinde UZEM (Ulusal Zehir Danışma Merkezi) 114 aranır."
-    },
-    // Orta Seviye (Detaylı Bilgiler)
-    {
-        level: "orta",
-        question: "STEMI'de PCI hedef süresi nedir?",
-        options: ["60 dakika", "90 dakika", "120 dakika", "180 dakika"],
-        correct: 1,
-        explanation: "STEMI'de PCI (primer anjiyoplasti) hedef süresi 90 dakikadır."
-    },
-    {
-        level: "orta",
-        question: "Çocuklarda bradikardi sınırı nedir?",
-        options: ["<50/dk", "<60/dk", "<70/dk", "<80/dk"],
-        correct: 2,
-        explanation: "Çocuklarda bradikardi genellikle <70/dk olarak kabul edilir."
-    },
-    {
-        level: "orta",
-        question: "Magnezyum sülfat dozu (preeklampsi) nedir?",
-        options: ["2-4 gr", "4-6 gr", "6-8 gr", "8-10 gr"],
-        correct: 1,
-        explanation: "Preeklampside MgSO4 yükleme dozu 4-6 gr IV'dir."
-    },
-    {
-        level: "orta",
-        question: "Krup tedavisinde kullanılan steroid nedir?",
-        options: ["Prednizolon", "Deksametazon", "Hidrokortizol", "Metilprednizolon"],
-        correct: 1,
-        explanation: "Krup tedavisinde deksametazon 0.6 mg/kg kullanılır."
-    },
-    {
-        level: "orta",
-        question: "Hipotermik arrest'te adrenalin ne zaman verilir?",
-        options: ["Hemen", "Sıcaklık >30°C", "Sıcaklık >32°C", "Sıcaklık >35°C"],
-        correct: 1,
-        explanation: "Hipotermik arrest'te sıcaklık >30°C olana kadar adrenalin verilmez."
-    },
-    {
-        level: "orta",
-        question: "Atropin dozu (bradikardi) nedir?",
-        options: ["0.25 mg", "0.5 mg", "1 mg", "2 mg"],
-        correct: 1,
-        explanation: "Bradikardide atropin dozu 0.5 mg IV'dir, gerekirse tekrarlanır."
-    },
-    {
-        level: "orta",
-        question: "SVT'de adenozin dozu nedir?",
-        options: ["3 mg", "6 mg", "12 mg", "18 mg"],
-        correct: 1,
-        explanation: "SVT'de adenozin ilk doz 6 mg hızlı IV puşe şeklinde verilir."
-    },
-    {
-        level: "orta",
-        question: "Amiodaron yükleme dozu nedir?",
-        options: ["150 mg", "300 mg", "450 mg", "600 mg"],
-        correct: 1,
-        explanation: "Amiodaron yükleme dozu VF/VT'de 300 mg IV'dir."
-    },
-    {
-        level: "orta",
-        question: "Çocukta adrenalin dozu (arrest) nedir?",
-        options: ["0.01 mg/kg", "0.1 mg/kg", "1 mg/kg", "10 mg/kg"],
-        correct: 0,
-        explanation: "Çocukta arrest durumunda adrenalin dozu 0.01 mg/kg IV/IO'dur."
-    },
-    {
-        level: "orta",
-        question: "Parkland formülü nedir?",
-        options: ["2 ml x kg x %yanık", "4 ml x kg x %yanık", "6 ml x kg x %yanık", "8 ml x kg x %yanık"],
-        correct: 1,
-        explanation: "Parkland formülü: 4 ml x kg x %yanık (ilk 8 saatte yarısı)."
-    },
-    {
-        level: "orta",
-        question: "Glasgow Koma Skalası minimum puanı nedir?",
-        options: ["0", "1", "3", "15"],
-        correct: 2,
-        explanation: "Glasgow Koma Skalası minimum 3, maksimum 15 puandır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta hipotansiyon sınırı (5 yaş) nedir?",
-        options: ["<60 mmHg", "<70 mmHg", "<80 mmHg", "<90 mmHg"],
-        correct: 2,
-        explanation: "Çocukta hipotansiyon sınırı: 70 + (yaş x 2) mmHg. 5 yaş için <80 mmHg."
-    },
-    {
-        level: "orta",
-        question: "Midazolam dozu (nöbet) nedir?",
-        options: ["0.05 mg/kg", "0.1 mg/kg", "0.2 mg/kg", "0.5 mg/kg"],
-        correct: 1,
-        explanation: "Nöbette midazolam dozu 0.1 mg/kg IV/IO'dur."
-    },
-    {
-        level: "orta",
-        question: "Çocukta sıvı bolus dozu nedir?",
-        options: ["10 ml/kg", "20 ml/kg", "30 ml/kg", "40 ml/kg"],
-        correct: 1,
-        explanation: "Çocukta sıvı bolus dozu 20 ml/kg izotonik kristaloiddir."
-    },
-    {
-        level: "orta",
-        question: "Aspirin dozu (AKS) nedir?",
-        options: ["75 mg", "150 mg", "300 mg", "600 mg"],
-        correct: 2,
-        explanation: "AKS'de aspirin dozu 300 mg çiğnetilerek verilir."
-    },
-    
-    // Ek Orta Seviye Sorular (66-95)
-    {
-        level: "orta",
-        question: "Akut miyokard infarktüsünde hangi enzim en erken yükselir?",
-        options: ["CK-MB", "Troponin", "Miyoglobin", "LDH"],
-        correct: 2,
-        explanation: "MI'da miyoglobin en erken yükselen belirteçtir (2-4 saat)."
-    },
-    {
-        level: "orta",
-        question: "Pulmoner emboli Wells skorunda kaç puan yüksek risk gösterir?",
-        options: [">2", ">4", ">6", ">8"],
-        correct: 1,
-        explanation: "Wells skorunda >4 puan yüksek PE riski gösterir."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte amilaz kaç kat yüksek olmalıdır?",
-        options: ["2 kat", "3 kat", "5 kat", "10 kat"],
-        correct: 1,
-        explanation: "Akut pankreatitte amilaz normal değerin 3 katı yüksek olmalıdır."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda bikarbonat değeri nedir?",
-        options: ["<10 mEq/L", "<15 mEq/L", "<20 mEq/L", "<25 mEq/L"],
-        correct: 1,
-        explanation: "DKA'da bikarbonat <15 mEq/L olarak tanımlanır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta normal sistolik kan basıncı formülü nedir?",
-        options: ["70 + (2 x yaş)", "80 + (2 x yaş)", "90 + (2 x yaş)", "100 + (2 x yaş)"],
-        correct: 1,
-        explanation: "Çocukta normal sistolik KB: 80 + (2 x yaş) mmHg."
-    },
-    {
-        level: "orta",
-        question: "Sepsis tanısında hangi laktat değeri anlamlıdır?",
-        options: [">1 mmol/L", ">2 mmol/L", ">3 mmol/L", ">4 mmol/L"],
-        correct: 1,
-        explanation: "Sepsis'te laktat >2 mmol/L doku hipoperfüzyonunu gösterir."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliğinde idrar çıkışı sınırı nedir?",
-        options: ["<0.3 ml/kg/saat", "<0.5 ml/kg/saat", "<1 ml/kg/saat", "<2 ml/kg/saat"],
-        correct: 1,
-        explanation: "ABY'de oligüri <0.5 ml/kg/saat olarak tanımlanır."
-    },
-    {
-        level: "orta",
-        question: "Hiponatremi düzeltme hızı maksimum ne kadar olmalıdır?",
-        options: ["6 mEq/L/gün", "8 mEq/L/gün", "10 mEq/L/gün", "12 mEq/L/gün"],
-        correct: 2,
-        explanation: "Hiponatremi düzeltmesi maksimum 10 mEq/L/gün olmalıdır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta febril konvülziyon yaş aralığı nedir?",
-        options: ["3 ay-3 yaş", "6 ay-5 yaş", "1-6 yaş", "2-8 yaş"],
-        correct: 1,
-        explanation: "Febril konvülziyon 6 ay-5 yaş arasında görülür."
-    },
-    {
-        level: "orta",
-        question: "Akut astım atağında peak flow normal değerin yüzde kaçının altında ise şiddetli kabul edilir?",
-        options: ["%30", "%40", "%50", "%60"],
-        correct: 2,
-        explanation: "Peak flow normal değerin %50'sinin altında ise şiddetli atak kabul edilir."
-    },
-    {
-        level: "orta",
-        question: "Preeklampside magnezyum sülfat idame dozu nedir?",
-        options: ["0.5-1 g/saat", "1-2 g/saat", "2-3 g/saat", "3-4 g/saat"],
-        correct: 1,
-        explanation: "Preeklampside MgSO4 idame dozu 1-2 g/saat IV'dir."
-    },
-    {
-        level: "orta",
-        question: "Akut koroner sendromda TIMI risk skoru maksimum kaç puandır?",
-        options: ["5", "6", "7", "8"],
-        correct: 2,
-        explanation: "TIMI risk skoru maksimum 7 puandır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta status epilepticus tanısı kaç dakika sonra konur?",
-        options: ["2 dakika", "5 dakika", "10 dakika", "30 dakika"],
-        correct: 1,
-        explanation: "Çocukta 5 dakikadan uzun nöbet status epilepticus kabul edilir."
-    },
-    {
-        level: "orta",
-        question: "Hiperkalsemi EKG bulgusu nedir?",
-        options: ["QT uzaması", "QT kısalması", "T dalga yüksekliği", "U dalgası"],
-        correct: 1,
-        explanation: "Hiperkalsemide QT kısalması görülür."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte Ranson kriterleri kaç tanedir?",
-        options: ["8", "9", "10", "11"],
-        correct: 3,
-        explanation: "Ranson kriterleri toplam 11 tanedir (5 başvuru + 6 takip)."
-    },
-    {
-        level: "orta",
-        question: "Çocukta dehidratasyon derecesi nasıl belirlenir?",
-        options: ["Sadece kilo kaybı", "Sadece vital bulgular", "Klinik bulgular", "Laboratuvar"],
-        correct: 2,
-        explanation: "Çocukta dehidratasyon derecesi klinik bulgularla belirlenir."
-    },
-    {
-        level: "orta",
-        question: "Akut aort diseksiyonunda D-dimer sensitivitesi nedir?",
-        options: ["85%", "90%", "95%", "99%"],
-        correct: 2,
-        explanation: "Akut aort diseksiyonunda D-dimer sensitivitesi %95'tir."
-    },
-    {
-        level: "orta",
-        question: "Hipoglisemik komada glukagon dozu nedir?",
-        options: ["0.5 mg", "1 mg", "2 mg", "5 mg"],
-        correct: 1,
-        explanation: "Hipoglisemik komada glukagon dozu 1 mg IM/SC'dir."
-    },
-    {
-        level: "orta",
-        question: "Çocukta normal kalp hızı (5 yaş) nedir?",
-        options: ["60-100/dk", "80-120/dk", "100-140/dk", "120-160/dk"],
-        correct: 2,
-        explanation: "5 yaş çocukta normal kalp hızı 100-140/dakikadır."
-    },
-    {
-        level: "orta",
-        question: "Akut miyokard infarktüsünde troponin ne zaman pik yapar?",
-        options: ["6-12 saat", "12-24 saat", "24-48 saat", "48-72 saat"],
-        correct: 1,
-        explanation: "MI'da troponin 12-24 saatte pik yapar."
-    },
-    {
-        level: "orta",
-        question: "Sepsis tanısında qSOFA skoru kaç puandır?",
-        options: ["≥1", "≥2", "≥3", "≥4"],
-        correct: 1,
-        explanation: "qSOFA skoru ≥2 puan sepsis riskini gösterir."
-    },
-    {
-        level: "orta",
-        question: "Çocukta hipotansiyon sınırı (10 yaş) nedir?",
-        options: ["<70 mmHg", "<80 mmHg", ">90 mmHg", "<100 mmHg"],
-        correct: 2,
-        explanation: "10 yaş çocukta hipotansiyon sınırı <90 mmHg'dır."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte lipaz normal değerin kaç katı yüksek olmalıdır?",
-        options: ["2 kat", "3 kat", "5 kat", "10 kat"],
-        correct: 1,
-        explanation: "Akut pankreatitte lipaz normal değerin 3 katı yüksek olmalıdır."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda anyon gap nedir?",
-        options: [">10", ">12", ">15", ">20"],
-        correct: 1,
-        explanation: "DKA'da anyon gap >12 mEq/L olarak kabul edilir."
-    },
-    {
-        level: "orta",
-        question: "Çocukta normal solunum sayısı (2 yaş) nedir?",
-        options: ["12-20/dk", "20-30/dk", "30-40/dk", "40-50/dk"],
-        correct: 1,
-        explanation: "2 yaş çocukta normal solunum sayısı 20-30/dakikadır."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliğinde kreatinin artışı (KDIGO Evre 1) nedir?",
-        options: ["1.2 kat", "1.5 kat", "2 kat", "3 kat"],
-        correct: 1,
-        explanation: "KDIGO Evre 1'de kreatinin 1.5 kat artış gösterir."
-    },
-    {
-        level: "orta",
-        question: "Preeklampside proteinüri sınırı nedir?",
-        options: ["100 mg/gün", "300 mg/gün", "500 mg/gün", "1000 mg/gün"],
-        correct: 1,
-        explanation: "Preeklampside proteinüri sınırı 300 mg/gün'dür."
-    },
-    {
-        level: "orta",
-        question: "Çocukta febril konvülziyon basit tip süresi ne kadardır?",
-        options: ["<5 dakika", "<10 dakika", "<15 dakika", "<20 dakika"],
-        correct: 2,
-        explanation: "Basit febril konvülziyon <15 dakika sürer."
-    },
-    {
-        level: "orta",
-        question: "Akut koroner sendromda CK-MB ne zaman yükselir?",
-        options: ["2-4 saat", "4-8 saat", "8-12 saat", "12-24 saat"],
-        correct: 1,
-        explanation: "CK-MB 4-8 saatte yükselmeye başlar."
-    },
-    {
-        level: "orta",
-        question: "Hiperosmolar hiperglisemik durumda glukoz değeri nedir?",
-        options: [">250 mg/dL", ">400 mg/dL", ">600 mg/dL", ">800 mg/dL"],
-        correct: 2,
-        explanation: "HHS'de glukoz genellikle >600 mg/dL'dir."
-    },
-    // Zor Seviye (Uzman Bilgiler)
-    {
-        level: "zor",
-        question: "Crush sendromunda hangi elektrolit bozukluğu en tehlikelidir?",
-        options: ["Hiponatremi", "Hiperkalemi", "Hipokalsemi", "Hipernatremi"],
-        correct: 1,
-        explanation: "Crush sendromunda hiperkalemi en tehlikeli komplikasyondur."
-    },
-    {
-        level: "zor",
-        question: "Post-ROSC hedef SpO2 nedir?",
-        options: ["88-92%", "92-96%", "94-98%", "98-100%"],
-        correct: 2,
-        explanation: "Post-ROSC hedef SpO2 %94-98'dir (hiperoksiden kaçınılır)."
-    },
-    {
-        level: "zor",
-        question: "Adenozin'in yarı ömrü ne kadardır?",
-        options: ["5-10 saniye", "10-15 saniye", "15-20 saniye", "20-30 saniye"],
-        correct: 0,
-        explanation: "Adenozin'in yarı ömrü çok kısa, yaklaşık 5-10 saniyedir."
-    },
-    {
-        level: "zor",
-        question: "Epiglotit'te hangi pozisyon tercih edilir?",
-        options: ["Sırt üstü", "Yan yatar", "Tripod pozisyonu", "Trendelenburg"],
-        correct: 2,
-        explanation: "Epiglotit'te çocuk en rahat ettiği tripod pozisyonunda tutulur."
-    },
-    {
-        level: "zor",
-        question: "Torsades de Pointes tedavisinde kullanılan ilaç nedir?",
-        options: ["Amiodaron", "Lidokain", "Magnezyum", "Prokainamid"],
-        correct: 2,
-        explanation: "Torsades de Pointes tedavisinde magnezyum sülfat kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Malign hipertermi tedavisinde kullanılan ilaç nedir?",
-        options: ["Dantrolen", "Propranolol", "Verapamil", "Nifedipin"],
-        correct: 0,
-        explanation: "Malign hipertermi tedavisinde dantrolen kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Organofosfor zehirlenmesinde antidot nedir?",
-        options: ["Nalokson", "Flumazenil", "Atropin", "N-asetilsistein"],
-        correct: 2,
-        explanation: "Organofosfor zehirlenmesinde atropin antidot olarak kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Hiperkalemide EKG değişikliği hangisidir?",
-        options: ["U dalgası", "Sivri T dalgası", "ST depresyonu", "QT uzaması"],
-        correct: 1,
-        explanation: "Hiperkalemide sivri T dalgaları görülür."
-    },
-    {
-        level: "zor",
-        question: "Tension pnömotoraks tedavisi nedir?",
-        options: ["Oksijen", "İğne dekompresyon", "Entübasyon", "Sıvı"],
-        correct: 1,
-        explanation: "Tension pnömotoraks acil iğne dekompresyon gerektirir."
-    },
-    {
-        level: "zor",
-        question: "Kardiyak tamponad triadı nedir?",
-        options: ["Beck triadı", "Cushing triadı", "Charcot triadı", "Whipple triadı"],
-        correct: 0,
-        explanation: "Kardiyak tamponadda Beck triadı: JVD, hipotansiyon, kalp seslerinde azalma."
-    },
-    {
-        level: "zor",
-        question: "Status epilepticus süresi nedir?",
-        options: ["2 dakika", "5 dakika", "10 dakika", "30 dakika"],
-        correct: 1,
-        explanation: "Status epilepticus 5 dakikadan uzun süren nöbet olarak tanımlanır."
-    },
-    {
-        level: "zor",
-        question: "Hiperosmolar koma tedavisinde sıvı hızı nedir?",
-        options: ["Hızlı", "Yavaş", "Normal", "Hiç verme"],
-        correct: 1,
-        explanation: "Hiperosmolar komada sıvı yavaş verilir (beyin ödemi riski)."
-    },
-    {
-        level: "zor",
-        question: "Aort diseksiyonunda hedef sistolik KB nedir?",
-        options: ["<100 mmHg", "<120 mmHg", "<140 mmHg", "<160 mmHg"],
-        correct: 0,
-        explanation: "Aort diseksiyonunda sistolik KB <100 mmHg hedeflenir."
-    },
-    {
-        level: "zor",
-        question: "Metanol zehirlenmesinde antidot nedir?",
-        options: ["Etanol", "Metilen mavisi", "Tiyosülfat", "Dimerkaptol"],
-        correct: 0,
-        explanation: "Metanol zehirlenmesinde etanol veya fomepizol antidot olarak kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Çocukta defibrilasyon dozu nedir?",
-        options: ["1 J/kg", "2 J/kg", "4 J/kg", "10 J/kg"],
-        correct: 1,
-        explanation: "Çocukta ilk defibrilasyon dozu 2 J/kg'dır."
-    },
-    // Daha Fazla Kolay Seviye Sorular
-    {
-        level: "kolay",
-        question: "İnme şüphesinde FAST testinde F harfi neyi ifade eder?",
-        options: ["Fever", "Face", "Foot", "Finger"],
-        correct: 1,
-        explanation: "FAST testinde F harfi Face (yüz) asimetrisini ifade eder."
-    },
-    {
-        level: "kolay",
-        question: "Miyokard infarktüsünün klasik belirtisi nedir?",
-        options: ["Sırt ağrısı", "Göğüs ağrısı", "Karın ağrısı", "Baş ağrısı"],
-        correct: 1,
-        explanation: "MI'nin klasik belirtisi göğüs ağrısıdır (crushing chest pain)."
-    },
-    {
-        level: "kolay",
-        question: "Diabetik ketoasidozda nefes kokusu nasıldır?",
-        options: ["Balık kokusu", "Meyve kokusu", "Çürük yumurta", "Amonyak"],
-        correct: 1,
-        explanation: "DKA'da nefeste meyve (aseton) kokusu vardır."
-    },
-    {
-        level: "kolay",
-        question: "Anafılaktik şokta ilk belirti genellikle nedir?",
-        options: ["Hipotansiyon", "Cilt reaksiyonu", "Solunum sıkıntısı", "Bilinç kaybı"],
-        correct: 1,
-        explanation: "Anafilakside genellikle ilk belirti cilt reaksiyonları (ürtiker, kızarıklık)dır."
-    },
-    {
-        level: "kolay",
-        question: "Epileptik nöbette hastanın dilini ısırmasını önlemek için ne yapılır?",
-        options: ["Ağzına kaşık koy", "Çenesini tut", "Hiçbir şey yapma", "Ağzını aç"],
-        correct: 2,
-        explanation: "Nöbet sırasında ağza hiçbir şey sokulmamalı, hasta kendiliğinden iyileşir."
-    },
-    {
-        level: "kolay",
-        question: "Kalp krizi geçiren hastaya hangi pozisyon verilir?",
-        options: ["Düz yatar", "Yarı oturur", "Trendelenburg", "Yan yatar"],
-        correct: 1,
-        explanation: "Kalp krizi hastasına yarı oturur pozisyon (fowler) verilir."
-    },
-    {
-        level: "kolay",
-        question: "Hiperventilasyon sendromunda ne yapılır?",
-        options: ["Oksijen ver", "Torba ile nefes aldır", "Sedasyon", "Entübasyon"],
-        correct: 1,
-        explanation: "Hiperventilasyonda kağıt torba ile CO2 rebreathing yapılır."
-    },
-    {
-        level: "kolay",
-        question: "Böbrek taşı ağrısının karakteristiği nedir?",
-        options: ["Sürekli ağrı", "Kolik ağrı", "Yanıcı ağrı", "Zonklayıcı ağrı"],
-        correct: 1,
-        explanation: "Böbrek taşı kolik tarzda şiddetli ağrıya neden olur."
-    },
-    {
-        level: "kolay",
-        question: "Apandisit ağrısı genellikle nereden başlar?",
-        options: ["Sağ alt kadran", "Sol alt kadran", "Göbek çevresi", "Sağ üst kadran"],
-        correct: 2,
-        explanation: "Apandisit ağrısı genellikle göbek çevresinden başlayıp sağ alt kadrana yayılır."
-    },
-    {
-        level: "kolay",
-        question: "Astım hastasında hangi ses duyulur?",
-        options: ["Ral", "Ronküs", "Wheezing", "Stridor"],
-        correct: 2,
-        explanation: "Astım hastasında wheezing (hırıltı) sesi duyulur."
-    },
-    {
-        level: "kolay",
-        question: "Hipertansif hastada baş ağrısı genellikle ne zaman olur?",
-        options: ["Sabah", "Öğlen", "Akşam", "Gece"],
-        correct: 0,
-        explanation: "Hipertansif baş ağrısı genellikle sabah saatlerinde daha belirgindir."
-    },
-    {
-        level: "kolay",
-        question: "Gebe hastada hangi pozisyon tercih edilir?",
-        options: ["Sırt üstü", "Sol yan", "Sağ yan", "Yüzüstü"],
-        correct: 1,
-        explanation: "Gebe hastada sol yan pozisyon tercih edilir (vena kava kompresyonunu önler)."
-    },
-    {
-        level: "kolay",
-        question: "Çocukta ateş sınırı nedir?",
-        options: ["37°C", "37.5°C", "38°C", "38.5°C"],
-        correct: 2,
-        explanation: "Çocukta ateş sınırı 38°C olarak kabul edilir."
-    },
-    {
-        level: "kolay",
-        question: "Dehidratasyon belirtisi hangisidir?",
-        options: ["Nemli mukoza", "Hızlı kapiller dolum", "Kuru mukoza", "Bradikardi"],
-        correct: 2,
-        explanation: "Dehidratasyonda mukozalar kuru olur, kapiller dolum uzar."
-    },
-    {
-        level: "kolay",
-        question: "Karbonmonoksit zehirlenmesinde cilt rengi nasıldır?",
-        options: ["Soluk", "Sarı", "Kiraz kırmızısı", "Mavi"],
-        correct: 2,
-        explanation: "CO zehirlenmesinde cilt kiraz kırmızısı renkte olur."
-    },
-    // Daha Fazla Orta Seviye Sorular
-    {
-        level: "orta",
-        question: "Sepsis tanı kriterlerinden biri nedir?",
-        options: ["Ateş >38°C", "Nabız >90/dk", "Solunum >20/dk", "Hepsi"],
-        correct: 3,
-        explanation: "Sepsis tanısında SIRS kriterleri: ateş >38°C, nabız >90/dk, solunum >20/dk."
-    },
-    {
-        level: "orta",
-        question: "Akut koroner sendromda troponin ne zaman yükselir?",
-        options: ["Hemen", "2-4 saat", "6-12 saat", "24 saat"],
-        correct: 2,
-        explanation: "Troponin MI'den 6-12 saat sonra yükselmeye başlar."
-    },
-    {
-        level: "orta",
-        question: "Pulmoner emboli için Wells skoru kaç ve üzeri risklidir?",
-        options: [">2", ">4", ">6", ">8"],
-        correct: 1,
-        explanation: "Wells skoru >4 pulmoner emboli için yüksek risk kabul edilir."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda pH değeri nedir?",
-        options: ["<7.1", "<7.2", "<7.3", "<7.4"],
-        correct: 2,
-        explanation: "DKA'da pH <7.3 veya bikarbonat <15 mEq/L olur."
-    },
-    {
-        level: "orta",
-        question: "Çocukta febril konvülziyon yaş aralığı nedir?",
-        options: ["0-2 yaş", "6 ay-5 yaş", "1-6 yaş", "2-8 yaş"],
-        correct: 1,
-        explanation: "Febril konvülziyon genellikle 6 ay-5 yaş arasında görülür."
-    },
-    {
-        level: "orta",
-        question: "Hiponatremi semptomları ne zaman başlar?",
-        options: ["<135 mEq/L", "<130 mEq/L", "<125 mEq/L", "<120 mEq/L"],
-        correct: 2,
-        explanation: "Hiponatremi semptomları genellikle Na <125 mEq/L'de başlar."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatit ağrısının karakteristiği nedir?",
-        options: ["Sırta yayılan", "Kolik tarzda", "Zonklayıcı", "Yanıcı"],
-        correct: 0,
-        explanation: "Akut pankreatit ağrısı sırta yayılan şiddetli ağrıdır."
-    },
-    {
-        level: "orta",
-        question: "Gastrointestinal kanama belirtisi hangisidir?",
-        options: ["Hematemez", "Melena", "Hematokezya", "Hepsi"],
-        correct: 3,
-        explanation: "GIS kanama belirtileri: hematemez (kusma), melena (siyah gaita), hematokezya (kanlı gaita)."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliği kreatinin artışı nedir?",
-        options: [">0.3 mg/dL", ">0.5 mg/dL", ">1.0 mg/dL", ">2.0 mg/dL"],
-        correct: 0,
-        explanation: "ABY tanısında kreatinin >0.3 mg/dL artış veya %50 artış kriteridir."
-    },
-    {
-        level: "orta",
-        question: "Hiperkalsemi EKG bulgusu nedir?",
-        options: ["QT uzaması", "QT kısalması", "T dalga yüksekliği", "U dalgası"],
-        correct: 1,
-        explanation: "Hiperkalsemide QT aralığı kısalır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta dehidratasyon derecesi nasıl belirlenir?",
-        options: ["Kilo kaybı", "Vital bulgular", "Klinik bulgular", "Hepsi"],
-        correct: 3,
-        explanation: "Çocukta dehidratasyon kilo kaybı, vital bulgular ve klinik bulgularla değerlendirilir."
-    },
-    {
-        level: "orta",
-        question: "Akut miyokard infarktüsünde hangi derivasyonlar anterior MI'yi gösterir?",
-        options: ["D1, aVL", "D2, D3, aVF", "V1-V6", "V3-V6"],
-        correct: 3,
-        explanation: "Anterior MI V3-V6 derivasyonlarında görülür."
-    },
-    {
-        level: "orta",
-        question: "Preeklampsi tanı kriterleri nedir?",
-        options: ["KB >140/90", "Proteinüri", "20. hafta sonrası", "Hepsi"],
-        correct: 3,
-        explanation: "Preeklampsi: 20. hafta sonrası KB >140/90 + proteinüri veya organ hasarı."
-    },
-    {
-        level: "orta",
-        question: "Akut astım atağında hangi bulgu kötü prognoz göstergesidir?",
-        options: ["Wheezing", "Öksürük", "Sessiz toraks", "Dispne"],
-        correct: 2,
-        explanation: "Sessiz toraks (silent chest) kötü prognoz göstergesidir."
-    },
-    {
-        level: "orta",
-        question: "Hipovolemik şokta hangi bulgu erken görülür?",
-        options: ["Hipotansiyon", "Taşikardi", "Oligüri", "Bilinç değişikliği"],
-        correct: 1,
-        explanation: "Hipovolemik şokta taşikardi erken bulgu, hipotansiyon geç bulgudur."
-    },
-    // Daha Fazla Zor Seviye Sorular
-    {
-        level: "zor",
-        question: "Hiperosmolar hiperglisemik durum (HHS) mortalite oranı nedir?",
-        options: ["%5-10", "%10-20", "%20-40", "%40-60"],
-        correct: 2,
-        explanation: "HHS mortalite oranı %20-40 arasındadır, DKA'dan daha yüksektir."
-    },
-    {
-        level: "zor",
-        question: "Aort diseksiyonu Stanford sınıflamasında Tip A nedir?",
-        options: ["Çıkan aort", "İnen aort", "Aort arkı", "Abdominal aort"],
-        correct: 0,
-        explanation: "Stanford Tip A: çıkan aortu içeren, Tip B: çıkan aortu içermeyen."
-    },
-    {
-        level: "zor",
-        question: "Malign hipertermi insidansı nedir?",
-        options: ["1:5.000", "1:15.000", "1:50.000", "1:100.000"],
-        correct: 2,
-        explanation: "Malign hipertermi insidansı yaklaşık 1:50.000-100.000'dir."
-    },
-    {
-        level: "zor",
-        question: "Siyanür zehirlenmesinde laktat düzeyi nasıldır?",
-        options: ["Normal", "Düşük", "Yüksek", "Değişken"],
-        correct: 2,
-        explanation: "Siyanür zehirlenmesinde hücresel hipoksi nedeniyle laktat yüksektir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta epiglotit insidansı hangi yaş grubunda en yüksektir?",
-        options: ["0-1 yaş", "2-4 yaş", "5-7 yaş", "8-10 yaş"],
-        correct: 1,
-        explanation: "Epiglotit insidansı 2-4 yaş grubunda en yüksektir."
-    },
-    {
-        level: "zor",
-        question: "Rhabdomyolizde CK düzeyi ne kadar yüksek olmalıdır?",
-        options: [">1.000", ">5.000", ">10.000", ">50.000"],
-        correct: 1,
-        explanation: "Rhabdomyoliz tanısında CK >5.000 U/L olmalıdır."
-    },
-    {
-        level: "zor",
-        question: "Hipotermide hangi sıcaklıkta kardiyak arrest riski artar?",
-        options: ["<35°C", "<32°C", "<28°C", "<25°C"],
-        correct: 2,
-        explanation: "Vücut sıcaklığı <28°C'de kardiyak arrest riski önemli ölçüde artar."
-    },
-    {
-        level: "zor",
-        question: "Akut aort diseksiyonunda D-dimer sensitivitesi nedir?",
-        options: ["%70", "%85", "%95", "%99"],
-        correct: 3,
-        explanation: "Akut aort diseksiyonunda D-dimer sensitivitesi %95-99'dur."
-    },
-    {
-        level: "zor",
-        question: "Çocukta status epilepticus mortalite oranı nedir?",
-        options: ["%1-3", "%3-5", "%5-10", "%10-15"],
-        correct: 0,
-        explanation: "Çocukta status epilepticus mortalite oranı %1-3'tür."
-    },
-    {
-        level: "zor",
-        question: "Hiperkalsemik krizde kalsiyum düzeyi nedir?",
-        options: [">12 mg/dL", ">14 mg/dL", ">16 mg/dL", ">18 mg/dL"],
-        correct: 1,
-        explanation: "Hiperkalsemik kriz genellikle kalsiyum >14 mg/dL'de görülür."
-    },
-    {
-        level: "zor",
-        question: "Akut pankreatitte Ranson kriterleri kaç tanedir?",
-        options: ["8", "9", "10", "11"],
-        correct: 3,
-        explanation: "Ranson kriterleri 11 tanedir (5 başvuru, 6 ilk 48 saat)."
-    },
-    {
-        level: "zor",
-        question: "Çocukta sepsis tanısında hangi skor kullanılır?",
-        options: ["SOFA", "qSOFA", "PELOD", "PRISM"],
-        correct: 2,
-        explanation: "Çocukta sepsis tanısında PELOD (Pediatric Logistic Organ Dysfunction) skoru kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Akut böbrek yetmezliğinde RIFLE sınıflamasında R nedir?",
-        options: ["Risk", "Renal", "Recovery", "Replacement"],
-        correct: 0,
-        explanation: "RIFLE: Risk, Injury, Failure, Loss, End-stage. R = Risk."
-    },
-    {
-        level: "zor",
-        question: "Hiponatremi düzeltme hızı maksimum ne kadar olmalıdır?",
-        options: ["6 mEq/L/gün", "8 mEq/L/gün", "10 mEq/L/gün", "12 mEq/L/gün"],
-        correct: 2,
-        explanation: "Hiponatremi düzeltme hızı maksimum 10 mEq/L/gün olmalıdır (osmotik demiyelinizasyon riski)."
-    },
-    {
-        level: "zor",
-        question: "Çocukta diabetik ketoasidoz sıvı tedavisinde maksimum hız nedir?",
-        options: ["1.5 x idame", "2 x idame", "2.5 x idame", "3 x idame"],
-        correct: 0,
-        explanation: "Çocukta DKA'da sıvı hızı maksimum 1.5 x idame olmalıdır (beyin ödemi riski)."
-    }
-];
 
-// Quiz sorularını karıştırma fonksiyonu
-function shuffleArray(array) {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-}
-    // Ek Kolay Seviye Sorular (30-60)
-    {
-        level: "kolay",
-        question: "Kalp masajında göğüs kafesinin hangi bölgesine basılır?",
-        options: ["Üst sternum", "Alt sternum", "Sol meme başı", "Sağ meme başı"],
-        correct: 1,
-        explanation: "Kalp masajı alt sternum (göğüs kemiği alt yarısı) bölgesine yapılır."
-    },
-    {
-        level: "kolay",
-        question: "Solunum durması durumunda kaç saniyede müdahale edilmelidir?",
-        options: ["30 saniye", "1 dakika", "2 dakika", "5 dakika"],
-        correct: 0,
-        explanation: "Solunum durmasında 30 saniye içinde müdahale edilmelidir."
-    },
-    {
-        level: "kolay",
-        question: "Elektrik çarpması durumunda ilk yapılacak nedir?",
-        options: ["Hastaya dokunmak", "Elektriği kesmek", "Su dökmek", "CPR başlamak"],
-        correct: 1,
-        explanation: "Elektrik çarpmasında önce elektrik kaynağı kesilmeli, güvenlik sağlanmalı."
-    },
-    {
-        level: "kolay",
-        question: "Boğulma durumunda hangi manevra uygulanır?",
-        options: ["Heimlich", "Valsalva", "Müller", "Trendelenburg"],
-        correct: 0,
-        explanation: "Boğulma durumunda Heimlich manevrası (karın itimi) uygulanır."
-    },
-    {
-        level: "kolay",
-        question: "Kanama durmasında ilk yapılacak nedir?",
-        options: ["Turnike", "Direkt bası", "Soğuk uygulama", "Yüksekte tutma"],
-        correct: 1,
-        explanation: "Kanamada ilk müdahale direkt bası (doğrudan basınç) uygulamaktır."
-    },
-    {
-        level: "kolay",
-        question: "Bilinç kaybında hastanın pozisyonu nasıl olmalı?",
-        options: ["Sırt üstü", "Yan yatar", "Oturur", "Ayakta"],
-        correct: 1,
-        explanation: "Bilinçsiz hasta yan yatar pozisyona alınır (recovery position)."
-    },
-    {
-        level: "kolay",
-        question: "Kırık şüphesinde ne yapılır?",
-        options: ["Hareket ettir", "İmmobilize et", "Masaj yap", "Sıcak uygula"],
-        correct: 1,
-        explanation: "Kırık şüphesinde ekstremite immobilize edilir (hareketsiz hale getirilir)."
-    },
-    {
-        level: "kolay",
-        question: "Hipotermide vücut sıcaklığı kaç derecenin altındadır?",
-        options: ["35°C", "36°C", "37°C", "38°C"],
-        correct: 0,
-        explanation: "Hipotermi vücut sıcaklığının 35°C'nin altına düşmesidir."
-    },
-    {
-        level: "kolay",
-        question: "Hipertermi durumunda ne yapılır?",
-        options: ["Isıtmak", "Soğutmak", "Örtmek", "Sıcak içecek"],
-        correct: 1,
-        explanation: "Hipertermide hasta soğutulur, serinletilir."
-    },
-    {
-        level: "kolay",
-        question: "Alerjik reaksiyon belirtisi hangisidir?",
-        options: ["Kaşıntı", "Şişlik", "Kızarıklık", "Hepsi"],
-        correct: 3,
-        explanation: "Alerjik reaksiyonda kaşıntı, şişlik, kızarıklık görülebilir."
-    },
-    {
-        level: "kolay",
-        question: "Göz yaralanmasında ne yapılmamalı?",
-        options: ["Yıkamak", "Ovmak", "Kapatmak", "Soğuk uygulama"],
-        correct: 1,
-        explanation: "Göz yaralanmasında göz ovulmamalı, sürtülmemelidir."
-    },
-    {
-        level: "kolay",
-        question: "Burun kanamasında baş pozisyonu nasıl olmalı?",
-        options: ["Geriye eğik", "Öne eğik", "Düz", "Yana eğik"],
-        correct: 1,
-        explanation: "Burun kanamasında baş öne eğik tutulur."
-    },
-    {
-        level: "kolay",
-        question: "Zehirlenme şüphesinde ne yapılmamalı?",
-        options: ["112 aramak", "Kusturmak", "Su vermek", "Hastaneye götürmek"],
-        correct: 1,
-        explanation: "Zehirlenme şüphesinde hasta kusturulmamalıdır."
-    },
-    {
-        level: "kolay",
-        question: "Diyabetik hastada şeker düşüklüğü belirtisi nedir?",
-        options: ["Susuzluk", "Terleme", "Sık idrara çıkma", "Kilo kaybı"],
-        correct: 1,
-        explanation: "Hipoglisemide terleme, titreme, baş dönmesi görülür."
-    },
-    {
-        level: "kolay",
-        question: "Kalp krizi riskini artıran faktör hangisidir?",
-        options: ["Sigara", "Stres", "Yüksek kolesterol", "Hepsi"],
-        correct: 3,
-        explanation: "Sigara, stres, yüksek kolesterol kalp krizi risk faktörleridir."
-    },
-    // Ek Kolay Seviye Sorular (60-90)
-    {
-        level: "kolay",
-        question: "İnme belirtilerinden hangisi FAST testinde yer alır?",
-        options: ["Baş ağrısı", "Yüz asimetrisi", "Göğüs ağrısı", "Karın ağrısı"],
-        correct: 1,
-        explanation: "FAST testinde F=Face (yüz asimetrisi) yer alır."
-    },
-    {
-        level: "kolay",
-        question: "Epilepsi nöbeti kaç dakika sürerse tehlikelidir?",
-        options: ["2 dakika", "5 dakika", "10 dakika", "15 dakika"],
-        correct: 1,
-        explanation: "5 dakikadan uzun süren nöbet status epilepticus olarak kabul edilir."
-    },
-    {
-        level: "kolay",
-        question: "Travma hastasında hangi bölge öncelikle kontrol edilir?",
-        options: ["Kafa", "Boyun", "Göğüs", "Karın"],
-        correct: 1,
-        explanation: "Travma hastasında önce boyun (servikal omurga) kontrol edilir."
-    },
-    {
-        level: "kolay",
-        question: "Şok belirtilerinden hangisi erken dönemde görülür?",
-        options: ["Hipotansiyon", "Taşikardi", "Bilinç kaybı", "Siyanoz"],
-        correct: 1,
-        explanation: "Şokta taşikardi erken bulgu, hipotansiyon geç bulgudur."
-    },
-    {
-        level: "kolay",
-        question: "Astım hastasında hangi pozisyon tercih edilir?",
-        options: ["Yatar", "Oturur", "Yan yatar", "Baş aşağı"],
-        correct: 1,
-        explanation: "Astım hastasında oturur pozisyon (fowler) tercih edilir."
-    },
-    {
-        level: "kolay",
-        question: "Çocukta ateş düşürücü olarak hangisi kullanılmaz?",
-        options: ["Parasetamol", "İbuprofen", "Aspirin", "Diklofenak"],
-        correct: 2,
-        explanation: "Çocuklarda aspirin Reye sendromu riski nedeniyle kullanılmaz."
-    },
-    {
-        level: "kolay",
-        question: "Gebe hastada hangi ilaç kullanılmaz?",
-        options: ["Parasetamol", "ACE inhibitörü", "İnsülin", "Kalsiyum"],
-        correct: 1,
-        explanation: "Gebelikte ACE inhibitörleri teratojenik etki nedeniyle kullanılmaz."
-    },
-    {
-        level: "kolay",
-        question: "Böbrek taşı ağrısı genellikle nereye yayılır?",
-        options: ["Sırta", "Kasığa", "Omza", "Boyuna"],
-        correct: 1,
-        explanation: "Böbrek taşı ağrısı genellikle kasık bölgesine yayılır."
-    },
-    {
-        level: "kolay",
-        question: "Miyokard infarktüsünde hangi enzim yükselir?",
-        options: ["ALT", "AST", "Troponin", "LDH"],
-        correct: 2,
-        explanation: "MI'de troponin spesifik kardiyak enzimdir."
-    },
-    {
-        level: "kolay",
-        question: "Hipertansif hastada hedef kan basıncı nedir?",
-        options: ["<120/80", "<130/80", "<140/90", "<150/90"],
-        correct: 0,
-        explanation: "Hipertansif hastada hedef KB <120/80 mmHg'dir."
-    },
-    {
-        level: "kolay",
-        question: "Diyabetik hastada hedef kan şekeri nedir?",
-        options: ["70-100 mg/dL", "80-130 mg/dL", "100-180 mg/dL", "150-250 mg/dL"],
-        correct: 1,
-        explanation: "Diyabetik hastada hedef kan şekeri 80-130 mg/dL'dir."
-    },
-    {
-        level: "kolay",
-        question: "KOAH hastasında oksijen hedefi nedir?",
-        options: ["88-92%", "94-98%", "98-100%", "85-90%"],
-        correct: 0,
-        explanation: "KOAH hastasında oksijen hedefi %88-92'dir."
-    },
-    {
-        level: "kolay",
-        question: "Akut pankreatit ağrısı hangi pozisyonda azalır?",
-        options: ["Sırt üstü", "Öne eğik", "Sağ yan", "Sol yan"],
-        correct: 1,
-        explanation: "Pankreatit ağrısı öne eğik pozisyonda (fetal pozisyon) azalır."
-    },
-    {
-        level: "kolay",
-        question: "Gastrointestinal kanama belirtisi hangisidir?",
-        options: ["Kanlı kusma", "Siyah gaita", "Kanlı gaita", "Hepsi"],
-        correct: 3,
-        explanation: "GIS kanama: hematemez (kanlı kusma), melena (siyah gaita), hematokezya (kanlı gaita)."
-    },
-    {
-        level: "kolay",
-        question: "Dehidratasyon tedavisinde hangi sıvı kullanılır?",
-        options: ["Distile su", "İzotonik salin", "Hipertonik salin", "Dekstroz"],
-        correct: 1,
-        explanation: "Dehidratasyon tedavisinde izotonik salin (%0.9 NaCl) kullanılır."
-    },
-    // Ek Orta Seviye Sorular (30-60)
-    {
-        level: "orta",
-        question: "Akut koroner sendromda TIMI risk skoru kaç faktörden oluşur?",
-        options: ["5", "6", "7", "8"],
-        correct: 2,
-        explanation: "TIMI risk skoru 7 faktörden oluşur (yaş, risk faktörleri, aspirin kullanımı vb.)."
-    },
-    {
-        level: "orta",
-        question: "Pulmoner emboli tanısında D-dimer cut-off değeri nedir?",
-        options: ["250 ng/mL", "500 ng/mL", "750 ng/mL", "1000 ng/mL"],
-        correct: 1,
-        explanation: "D-dimer cut-off değeri genellikle 500 ng/mL'dir."
-    },
-    {
-        level: "orta",
-        question: "Akut miyokard infarktüsünde CK-MB ne zaman pik yapar?",
-        options: ["6-8 saat", "12-24 saat", "24-36 saat", "48-72 saat"],
-        correct: 1,
-        explanation: "CK-MB MI'den 12-24 saat sonra pik yapar."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda anyon gap nedir?",
-        options: [">10", ">12", ">15", ">20"],
-        correct: 1,
-        explanation: "DKA'da anyon gap >12 mEq/L'dir (yüksek anyon gap metabolik asidoz)."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte lipaz ne zaman yükselir?",
-        options: ["2-4 saat", "4-8 saat", "8-12 saat", "12-24 saat"],
-        correct: 1,
-        explanation: "Akut pankreatitte lipaz 4-8 saat içinde yükselir."
-    },
-    {
-        level: "orta",
-        question: "Hiponatremi düzeltmesinde maksimum hız nedir?",
-        options: ["6 mEq/L/gün", "8 mEq/L/gün", "10 mEq/L/gün", "12 mEq/L/gün"],
-        correct: 2,
-        explanation: "Hiponatremi düzeltme hızı maksimum 10 mEq/L/gün olmalıdır."
-    },
-    {
-        level: "orta",
-        question: "Sepsis tanısında qSOFA skoru kaç puandır?",
-        options: ["≥1", "≥2", "≥3", "≥4"],
-        correct: 1,
-        explanation: "qSOFA skoru ≥2 sepsis için yüksek risk göstergesidir."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliğinde KDIGO evrelemesinde Evre 1 kreatinin artışı nedir?",
-        options: ["1.5 kat", "2 kat", "3 kat", "4 kat"],
-        correct: 0,
-        explanation: "KDIGO Evre 1: kreatinin 1.5 kat artış veya >0.3 mg/dL artış."
-    },
-    {
-        level: "orta",
-        question: "Hiperkalsemide EKG değişikliği nedir?",
-        options: ["QT uzaması", "QT kısalması", "PR uzaması", "QRS genişlemesi"],
-        correct: 1,
-        explanation: "Hiperkalsemide QT aralığı kısalır."
-    },
-    {
-        level: "orta",
-        question: "Akut astım atağında peak flow normal değerin yüzde kaçının altında ise şiddetli kabul edilir?",
-        options: ["%50", "%60", "%70", "%80"],
-        correct: 0,
-        explanation: "Peak flow normal değerin %50'sinin altında ise şiddetli astım atağıdır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta febril konvülziyon basit tip süresi ne kadardır?",
-        options: ["<5 dakika", "<10 dakika", "<15 dakika", "<20 dakika"],
-        correct: 2,
-        explanation: "Basit febril konvülziyon <15 dakika sürer, fokal değildir."
-    },
-    {
-        level: "orta",
-        question: "Preeklampside proteinüri sınırı nedir?",
-        options: ["100 mg/gün", "300 mg/gün", "500 mg/gün", "1000 mg/gün"],
-        correct: 1,
-        explanation: "Preeklampside proteinüri ≥300 mg/gün veya protein/kreatinin >0.3'tür."
-    },
-    {
-        level: "orta",
-        question: "Akut aort diseksiyonunda hangi derivasyonlarda ST elevasyonu görülürse koroner tutulum düşünülür?",
-        options: ["V1-V3", "V4-V6", "D2,D3,aVF", "D1,aVL"],
-        correct: 3,
-        explanation: "Aort diseksiyonunda D1,aVL'de ST elevasyonu koroner tutulum gösterebilir."
-    },
-    {
-        level: "orta",
-        question: "Hipoglisemik komada glukagon dozu nedir?",
-        options: ["0.5 mg", "1 mg", "2 mg", "5 mg"],
-        correct: 1,
-        explanation: "Hipoglisemik komada glukagon dozu 1 mg IM/SC'dir."
-    },
-    {
-        level: "orta",
-        question: "Çocukta status epilepticus tedavisinde ikinci basamak ilaç nedir?",
-        options: ["Diazepam", "Fenitoin", "Valproat", "Levetirasetam"],
-        correct: 1,
-        explanation: "Status epilepticus'ta ikinci basamak fenitoin veya fosphenytoin'dir."
-    },
-    // Ek Orta Seviye Sorular (60-90)
-    {
-        level: "orta",
-        question: "Akut koroner sendromda troponin I normal üst sınırı nedir?",
-        options: ["0.04 ng/mL", "0.1 ng/mL", "0.4 ng/mL", "1.0 ng/mL"],
-        correct: 0,
-        explanation: "Troponin I normal üst sınırı genellikle 0.04 ng/mL'dir."
-    },
-    {
-        level: "orta",
-        question: "Hipovolemik şokta hangi bulgu kompansasyon mekanizmasıdır?",
-        options: ["Hipotansiyon", "Taşikardi", "Oligüri", "Hepsi"],
-        correct: 3,
-        explanation: "Hipovolemik şokta taşikardi, vazokonstrüksiyon, oligüri kompensasyon mekanizmalarıdır."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte Ranson kriterleri başvuruda kaç tanedir?",
-        options: ["3", "4", "5", "6"],
-        correct: 2,
-        explanation: "Ranson kriterleri başvuruda 5 tane (yaş, lökosit, glukoz, AST, LDH)."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda insülin infüzyon hızı nedir?",
-        options: ["0.05 Ü/kg/saat", "0.1 Ü/kg/saat", "0.2 Ü/kg/saat", "0.5 Ü/kg/saat"],
-        correct: 1,
-        explanation: "DKA'da insülin infüzyon hızı 0.1 Ü/kg/saat'tir."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliğinde prerenal nedenlerin oranı nedir?",
-        options: ["%40", "%55", "%70", "%85"],
-        correct: 2,
-        explanation: "ABY'nin yaklaşık %70'i prerenal nedenlidir."
-    },
-    {
-        level: "orta",
-        question: "Hiperkalsemide hangi EKG değişikliği erken görülür?",
-        options: ["QT kısalması", "T dalga yüksekliği", "PR uzaması", "QRS genişlemesi"],
-        correct: 0,
-        explanation: "Hiperkalsemide ilk EKG değişikliği QT kısalmasıdır."
-    },
-    {
-        level: "orta",
-        question: "Çocukta dehidratasyon şiddeti nasıl sınıflandırılır?",
-        options: ["Hafif-orta-şiddetli", "Grade 1-2-3", "Evre A-B-C", "Tip 1-2-3"],
-        correct: 0,
-        explanation: "Çocukta dehidratasyon hafif (%3-5), orta (%6-9), şiddetli (>%10) olarak sınıflandırılır."
-    },
-    {
-        level: "orta",
-        question: "Akut miyokard infarktüsünde kontrendikasyon hangisidir?",
-        options: ["Yaş >75", "Hipertansiyon", "Aktif kanama", "Diyabet"],
-        correct: 2,
-        explanation: "Trombolitik tedavide aktif kanama mutlak kontrendikasyondur."
-    },
-    {
-        level: "orta",
-        question: "Sepsis tanısında SOFA skoru kaç organa bakar?",
-        options: ["4", "5", "6", "7"],
-        correct: 2,
-        explanation: "SOFA skoru 6 organ sistemini değerlendirir (solunum, koagülasyon, karaciğer, kardiyovasküler, SSS, böbrek)."
-    },
-    {
-        level: "orta",
-        question: "Akut astım atağında hangi bulgu hospitalizasyon gerektirir?",
-        options: ["Peak flow <%50", "Oksijen ihtiyacı", "Konuşamama", "Hepsi"],
-        correct: 3,
-        explanation: "Peak flow <%50, oksijen ihtiyacı, konuşamama hospitalizasyon gerektiren bulgulardır."
-    },
-    {
-        level: "orta",
-        question: "Hiponatremi semptomları hangi düzeyde başlar?",
-        options: ["<135 mEq/L", "<130 mEq/L", "<125 mEq/L", "<120 mEq/L"],
-        correct: 2,
-        explanation: "Hiponatremi semptomları genellikle Na <125 mEq/L'de başlar."
-    },
-    {
-        level: "orta",
-        question: "Çocukta febril konvülziyon riski hangi yaş grubunda en yüksektir?",
-        options: ["6-12 ay", "12-18 ay", "18-24 ay", "2-3 yaş"],
-        correct: 1,
-        explanation: "Febril konvülziyon riski 12-18 ay yaş grubunda en yüksektir."
-    },
-    {
-        level: "orta",
-        question: "Akut pankreatitte amilaz ne zaman normale döner?",
-        options: ["2-3 gün", "3-5 gün", "5-7 gün", "7-10 gün"],
-        correct: 1,
-        explanation: "Akut pankreatitte amilaz 3-5 gün içinde normale döner."
-    },
-    {
-        level: "orta",
-        question: "Diabetik ketoasidozda bikarbonat ne zaman verilir?",
-        options: ["pH <7.0", "pH <7.1", "pH <7.2", "Hiç verilmez"],
-        correct: 0,
-        explanation: "DKA'da bikarbonat sadece pH <7.0 ise verilir."
-    },
-    {
-        level: "orta",
-        question: "Akut böbrek yetmezliğinde hangi elektrolit bozukluğu en tehlikelidir?",
-        options: ["Hiponatremi", "Hiperkalemi", "Hipokalsemi", "Hiperfosfatemi"],
-        correct: 1,
-        explanation: "ABY'de hiperkalemi en tehlikeli elektrolit bozukluğudur (kardiyak arrest riski)."
-    },
-    // Ek Zor Seviye Sorular (30-60)
-    {
-        level: "zor",
-        question: "Hiperosmolar hiperglisemik durumda (HHS) osmolalite sınırı nedir?",
-        options: [">300 mOsm/kg", ">320 mOsm/kg", ">340 mOsm/kg", ">360 mOsm/kg"],
-        correct: 1,
-        explanation: "HHS'de serum osmolalitesi >320 mOsm/kg'dır."
-    },
-    {
-        level: "zor",
-        question: "Aort diseksiyonu DeBakey sınıflamasında Tip III nedir?",
-        options: ["Çıkan aort", "Aort arkı", "İnen aort", "Abdominal aort"],
-        correct: 2,
-        explanation: "DeBakey Tip III: sadece inen aortu içeren diseksiyon."
-    },
-    {
-        level: "zor",
-        question: "Malign hipertermi tedavisinde dantrolen dozu nedir?",
-        options: ["1 mg/kg", "2.5 mg/kg", "5 mg/kg", "10 mg/kg"],
-        correct: 1,
-        explanation: "Malign hipertermide dantrolen dozu 2.5 mg/kg IV'dir."
-    },
-    {
-        level: "zor",
-        question: "Siyanür zehirlenmesinde hidroksikobalomin dozu nedir?",
-        options: ["2.5 g", "5 g", "7.5 g", "10 g"],
-        correct: 1,
-        explanation: "Siyanür zehirlenmesinde hidroksikobalomin (Cyanokit) dozu 5 g IV'dir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta epiglotit mortalite oranı nedir?",
-        options: ["%1-2", "%5-10", "%10-15", "%15-20"],
-        correct: 0,
-        explanation: "Çocukta epiglotit mortalite oranı %1-2'dir (erken tanı ve tedavi ile)."
-    },
-    {
-        level: "zor",
-        question: "Rhabdomyolizde miyoglobin böbrek hasarı eşiği nedir?",
-        options: [">100 ng/mL", ">500 ng/mL", ">1000 ng/mL", ">1500 ng/mL"],
-        correct: 3,
-        explanation: "Miyoglobin >1500 ng/mL'de böbrek hasarı riski artar."
-    },
-    {
-        level: "zor",
-        question: "Hipotermide hangi sıcaklıkta J (Osborn) dalgası görülür?",
-        options: ["<35°C", "<32°C", "<30°C", "<28°C"],
-        correct: 1,
-        explanation: "J (Osborn) dalgası genellikle vücut sıcaklığı <32°C'de görülür."
-    },
-    {
-        level: "zor",
-        question: "Akut aort diseksiyonunda D-dimer negatif olma oranı nedir?",
-        options: ["%1", "%5", "%10", "%15"],
-        correct: 0,
-        explanation: "Akut aort diseksiyonunda D-dimer negatiflik oranı sadece %1'dir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta status epilepticus refrakter kabul edilme süresi nedir?",
-        options: ["30 dakika", "45 dakika", "60 dakika", "90 dakika"],
-        correct: 2,
-        explanation: "Çocukta status epilepticus 60 dakika sonra refrakter kabul edilir."
-    },
-    {
-        level: "zor",
-        question: "Hiperkalsemik krizde kalsitonin dozu nedir?",
-        options: ["2-4 Ü/kg", "4-8 Ü/kg", "8-12 Ü/kg", "12-16 Ü/kg"],
-        correct: 1,
-        explanation: "Hiperkalsemik krizde kalsitonin dozu 4-8 Ü/kg SC/IM'dir."
-    },
-    {
-        level: "zor",
-        question: "Akut pankreatitte APACHE II skoru kaç puanın üzeri kötü prognoz göstergesidir?",
-        options: [">6", ">8", ">10", ">12"],
-        correct: 1,
-        explanation: "APACHE II skoru >8 akut pankreatitte kötü prognoz göstergesidir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta sepsis tanısında PELOD-2 skoru kaç organa bakar?",
-        options: ["4", "5", "6", "7"],
-        correct: 1,
-        explanation: "PELOD-2 skoru 5 organ sistemini değerlendirir."
-    },
-    {
-        level: "zor",
-        question: "Akut böbrek yetmezliğinde RIFLE sınıflamasında 'I' nedir?",
-        options: ["Injury", "Insufficiency", "Ischemia", "Inflammation"],
-        correct: 0,
-        explanation: "RIFLE sınıflamasında I = Injury (yaralanma)."
-    },
-    {
-        level: "zor",
-        question: "Hiponatremi düzeltmesinde osmotik demiyelinizasyon riski hangi hızda artar?",
-        options: [">8 mEq/L/gün", ">10 mEq/L/gün", ">12 mEq/L/gün", ">15 mEq/L/gün"],
-        correct: 2,
-        explanation: "Hiponatremi düzeltme hızı >12 mEq/L/gün'de osmotik demiyelinizasyon riski artar."
-    },
-    {
-        level: "zor",
-        question: "Çocukta diabetik ketoasidoz beyin ödemi riski hangi faktörle artar?",
-        options: ["Hızlı sıvı", "Yavaş insülin", "Bikarbonat", "Hepsi"],
-        correct: 3,
-        explanation: "Çocukta DKA'da hızlı sıvı, bikarbonat kullanımı beyin ödemi riskini artırır."
-    },
-    // Ek Zor Seviye Sorular (60-90)
-    {
-        level: "zor",
-        question: "Hiperosmolar hiperglisemik durumda (HHS) sıvı açığı nasıl hesaplanır?",
-        options: ["0.6 x kg x (Na-140)/140", "0.5 x kg x (Na-140)/140", "0.4 x kg x (Na-140)/140", "0.3 x kg x (Na-140)/140"],
-        correct: 0,
-        explanation: "HHS'de sıvı açığı: 0.6 x kg x (Na-140)/140 formülü ile hesaplanır."
-    },
-    {
-        level: "zor",
-        question: "Aort diseksiyonu Penn sınıflamasında Aa nedir?",
-        options: ["Akut çıkan", "Akut inen", "Kronik çıkan", "Kronik inen"],
-        correct: 0,
-        explanation: "Penn sınıflaması: Aa (akut çıkan), Ab (akut inen), Ba (kronik çıkan), Bb (kronik inen)."
-    },
-    {
-        level: "zor",
-        question: "Malign hipertermi genetik geçiş şekli nedir?",
-        options: ["Otozomal dominant", "Otozomal resesif", "X'e bağlı", "Mitokondriyal"],
-        correct: 0,
-        explanation: "Malign hipertermi otozomal dominant geçiş gösterir."
-    },
-    {
-        level: "zor",
-        question: "Siyanür zehirlenmesinde venöz oksijen satürasyonu nasıldır?",
-        options: ["Düşük", "Normal", "Yüksek", "Değişken"],
-        correct: 2,
-        explanation: "Siyanür zehirlenmesinde hücresel oksijen kullanımı bozulduğu için venöz O2 satürasyonu yüksektir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta epiglotit hangi bakterinin neden olduğu form azalmıştır?",
-        options: ["S. pneumoniae", "H. influenzae tip b", "S. pyogenes", "S. aureus"],
-        correct: 1,
-        explanation: "Hib aşısı sonrası H. influenzae tip b'ye bağlı epiglotit önemli ölçüde azalmıştır."
-    },
-    {
-        level: "zor",
-        question: "Rhabdomyolizde böbrek koruma için idrar pH hedefi nedir?",
-        options: [">6.0", ">6.5", ">7.0", ">7.5"],
-        correct: 1,
-        explanation: "Rhabdomyolizde böbrek koruması için idrar pH >6.5 hedeflenir."
-    },
-    {
-        level: "zor",
-        question: "Hipotermide hangi sıcaklıkta atrial fibrilasyon riski artar?",
-        options: ["<35°C", "<32°C", "<30°C", "<28°C"],
-        correct: 1,
-        explanation: "Vücut sıcaklığı <32°C'de atrial fibrilasyon riski önemli ölçüde artar."
-    },
-    {
-        level: "zor",
-        question: "Akut aort diseksiyonunda hangi görüntüleme yönteminin sensitivitesi en yüksektir?",
-        options: ["BT", "MRI", "TEE", "Aortografi"],
-        correct: 1,
-        explanation: "MRI'ın aort diseksiyonu tanısında sensitivitesi en yüksektir (%95-100)."
-    },
-    {
-        level: "zor",
-        question: "Çocukta status epilepticus süper-refrakter kabul edilme süresi nedir?",
-        options: ["12 saat", "24 saat", "48 saat", "72 saat"],
-        correct: 1,
-        explanation: "Süper-refrakter status epilepticus anestezi ile kontrol sonrası 24 saat içinde tekrarlayan nöbettir."
-    },
-    {
-        level: "zor",
-        question: "Hiperkalsemik krizde bifosfonat etkisi ne zaman başlar?",
-        options: ["2-4 saat", "12-24 saat", "24-48 saat", "48-72 saat"],
-        correct: 3,
-        explanation: "Bifosfonatların hiperkalsemideki etkisi 48-72 saat sonra başlar."
-    },
-    {
-        level: "zor",
-        question: "Akut pankreatitte Balthazar CT skorunda E evresi nedir?",
-        options: ["Normal pankreas", "Fokal büyüme", "Heterojen büyüme", "Sıvı koleksiyonu"],
-        correct: 3,
-        explanation: "Balthazar CT skorunda E evresi: pankreas nekrozu + sıvı koleksiyonu."
-    },
-    {
-        level: "zor",
-        question: "Çocukta sepsis tanısında hangi yaş grubunda farklı kriterler kullanılır?",
-        options: ["<1 ay", "<3 ay", "<6 ay", "<1 yaş"],
-        correct: 0,
-        explanation: "Yenidoğan (<1 ay) sepsis tanısında farklı kriterler kullanılır."
-    },
-    {
-        level: "zor",
-        question: "Akut böbrek yetmezliğinde AKIN sınıflaması kaç evreden oluşur?",
-        options: ["2", "3", "4", "5"],
-        correct: 1,
-        explanation: "AKIN sınıflaması 3 evreden oluşur (Evre 1, 2, 3)."
-    },
-    {
-        level: "zor",
-        question: "Hiponatremi düzeltmesinde hangi durumda daha hızlı düzeltme yapılabilir?",
-        options: ["Kronik hiponatremi", "Akut hiponatremi", "Asemptomatik", "Yaşlı hasta"],
-        correct: 1,
-        explanation: "Akut hiponatremi (<48 saat) daha hızlı düzeltilebilir."
-    },
-    {
-        level: "zor",
-        question: "Çocukta diabetik ketoasidoz sıvı tedavisinde dehidratasyon düzeltme süresi nedir?",
-        options: ["12 saat", "24 saat", "36 saat", "48 saat"],
-        correct: 3,
-        explanation: "Çocukta DKA'da dehidratasyon 48 saat içinde düzeltilir (beyin ödemi riskini azaltmak için)."
-    },
-    // Ek Kolay Seviye Sorular (90-120)
-    {
-        level: "kolay",
-        question: "Kalp durmasında ilk yapılacak nedir?",
-        options: ["İlaç vermek", "Defibrilasyon", "CPR başlamak", "Entübasyon"],
-        correct: 2,
-        explanation: "Kalp durmasında ilk müdahale CPR (kalp masajı) başlamaktır."
-    },
-    {
-        level: "kolay",
-        question: "Solunum durmasında hangi pozisyon verilir?",
-        options: ["Yan yatar", "Baş geriye eğik", "Oturur", "Ayakta"],
-        correct: 1,
-        explanation: "Solunum durmasında baş geriye eğik, çene yukarı pozisyonu verilir."
-    },
-    {
-        level: "kolay",
-        question: "Elektrik çarpmasında nabız hangi yerden alınır?",
-        options: ["Radial", "Karotis", "Femoral", "Brakial"],
-        correct: 1,
-        explanation: "Elektrik çarpmasında nabız karotis arterden alınır."
-    },
-    {
-        level: "kolay",
-        question: "Boğulma durumunda çocukta hangi manevra uygulanır?",
-        options: ["Heimlich", "Sırt vuruşu", "Baş aşağı", "Göğüs basısı"],
-        correct: 1,
-        explanation: "1 yaş altı çocukta sırt vuruşu ve göğüs basısı uygulanır."
-    },
-    {
-        level: "kolay",
-        question: "Kanama durmasında turnike ne zaman uygulanır?",
-        options: ["İlk müdahale", "Direkt bası etkisiz", "Daima", "Hiçbir zaman"],
-        correct: 1,
-        explanation: "Turnike direkt bası ve basınçlı bandaj etkisiz olduğunda uygulanır."
-    },
-    {
-        level: "kolay",
-        question: "Bilinç kaybında nabız hangi yerden kontrol edilir?",
-        options: ["El bileği", "Boyun", "Kasık", "Ayak bileği"],
-        correct: 1,
-        explanation: "Bilinçsiz hastada nabız boyun (karotis arter) bölgesinden kontrol edilir."
-    },
-    {
-        level: "kolay",
-        question: "Kırık şüphesinde ekstremite nasıl taşınır?",
-        options: ["Serbest", "Sabitlenmiş", "Bükümlü", "Gergin"],
-        correct: 1,
-        explanation: "Kırık şüphesinde ekstremite sabitlenmiş (immobilize) şekilde taşınır."
-    },
-    {
-        level: "kolay",
-        question: "Hipotermide hasta nasıl ısıtılır?",
-        options: ["Hızlı", "Yavaş", "Sıcak su", "Elektrikli battaniye"],
-        correct: 1,
-        explanation: "Hipotermide hasta yavaş ve kademeli olarak ısıtılır."
-    },
-    {
-        level: "kolay",
-        question: "Hipertermi durumunda hangi bölge soğutulur?",
-        options: ["Ayaklar", "Eller", "Boyun-koltuk altı", "Karın"],
-        correct: 2,
-        explanation: "Hipertermide boyun, koltuk altı, kasık gibi büyük damarların olduğu yerler soğutulur."
-    },
-    {
-        level: "kolay",
-        question: "Alerjik reaksiyon durumunda hangi ilaç kullanılır?",
-        options: ["Aspirin", "Adrenalin", "Antibiyotik", "Steroid"],
-        correct: 1,
-        explanation: "Şiddetli alerjik reaksiyonda (anafilaksi) adrenalin kullanılır."
-    },
-    {
-        level: "kolay",
-        question: "Göz yaralanmasında göz nasıl korunur?",
-        options: ["Sıkı bandaj", "Gevşek örtü", "Pamuk", "Hiçbir şey"],
-        correct: 1,
-        explanation: "Göz yaralanmasında göz gevşek örtü ile korunur, baskı yapılmaz."
-    },
-    {
-        level: "kolay",
-        question: "Burun kanamasında hangi bölgeye baskı yapılır?",
-        options: ["Burun köprüsü", "Burun ucu", "Burun kanadı", "Alın"],
-        correct: 2,
-        explanation: "Burun kanamasında burun kanadına (yumuşak kısım) baskı yapılır."
-    },
-    {
-        level: "kolay",
-        question: "Zehirlenme şüphesinde hangi numara aranır?",
-        options: ["112", "114", "155", "110"],
-        correct: 1,
-        explanation: "Zehirlenme şüphesinde UZEM (114) aranır."
-    },
-    {
-        level: "kolay",
-        question: "Diyabetik hastada şeker yüksekliği belirtisi nedir?",
-        options: ["Terleme", "Susuzluk", "Titreme", "Baş dönmesi"],
-        correct: 1,
-        explanation: "Hiperglisemide susuzluk, sık idrara çıkma, yorgunluk görülür."
-    },
-    {
-        level: "kolay",
-        question: "Kalp krizi riskini azaltan faktör hangisidir?",
-        options: ["Sigara", "Egzersiz", "Stres", "Yağlı yemek"],
-        correct: 1,
-        explanation: "Düzenli egzersiz kalp krizi riskini azaltır."
-    },
+function renderFavorites() {
+    const favorites = getFavorites();
+    const favoritesSection = document.getElementById('favoritesSection');
+    const favoritesGrid = document.getElementById('favoritesGrid');
+    const noFavorites = document.getElementById('noFavorites');
     
-    // Ek Kolay Seviye Sorular (81-110)
-    {
-        level: "kolay",
-        question: "Solunum yolu tıkanıklığında hangi ses duyulur?",
-        options: ["Wheezing", "Stridor", "Ronküs", "Ral"],
-        correct: 1,
-        explanation: "Üst solunum yolu tıkanıklığında stridor sesi duyulur."
-    },
-    {
-        level: "kolay",
-        question: "Kalp durması durumunda göğüs basısı hızı nedir?",
-        options: ["60-80/dk", "80-100/dk", "100-120/dk", "120-140/dk"],
-        correct: 2,
-        explanation: "Kalp durmasında göğüs basısı hızı 100-120/dakika olmalıdır."
-    },
-    {
-        level: "kolay",
-        question: "Bilinçsiz hastada nabız nereden kontrol edilir?",
-        options: ["El bileği", "Boyun", "Kasık", "Ayak bileği"],
-        correct: 1,
-        explanation: "Bilinçsiz hastada nabız boyun (karotis arter) bölgesinden kontrol edilir."
-    },
-    {
-        level: "kolay",
-        question: "Kırık şüphesinde ekstremite nasıl taşınır?",
-        options: ["Serbest", "Sabitlenmiş", "Bükümlü", "Gergin"],
-        correct: 1,
-        explanation: "Kırık şüphesinde ekstremite sabitlenmiş (immobilize) şekilde taşınır."
-    },
-    {
-        level: "kolay",
-        question: "Hipotermide hasta nasıl ısıtılır?",
-        options: ["Hızlı", "Yavaş", "Sıcak su", "Elektrikli battaniye"],
-        correct: 1,
-        explanation: "Hipotermide hasta yavaş ve kademeli olarak ısıtılır."
-    },
-    {
-        level: "kolay",
-        question: "Hipertermi durumunda hangi bölge soğutulur?",
-        options: ["Ayaklar", "Eller", "Boyun-koltuk altı", "Karın"],
-        correct: 2,
-        explanation: "Hipertermide boyun, koltuk altı, kasık gibi büyük damarların olduğu yerler soğutulur."
-    },
-    {
-        level: "kolay",
-        question: "Alerjik reaksiyon durumunda hangi ilaç kullanılır?",
-        options: ["Aspirin", "Adrenalin", "Antibiyotik", "Steroid"],
-        correct: 1,
-        explanation: "Şiddetli alerjik reaksiyonda (anafilaksi) adrenalin kullanılır."
-    },
-    {
-        level: "kolay",
-        question: "Göz yaralanmasında göz nasıl korunur?",
-        options: ["Sıkı bandaj", "Gevşek örtü", "Pamuk", "Hiçbir şey"],
-        correct: 1,
-        explanation: "Göz yaralanmasında göz gevşek örtü ile korunur, baskı yapılmaz."
-    },
-    {
-        level: "kolay",
-        question: "Burun kanamasında hangi bölgeye baskı yapılır?",
-        options: ["Burun köprüsü", "Burun ucu", "Burun kanadı", "Alın"],
-        correct: 2,
-        explanation: "Burun kanamasında burun kanadına (yumuşak kısım) baskı yapılır."
-    },
-    {
-        level: "kolay",
-        question: "Zehirlenme şüphesinde hangi numara aranır?",
-        options: ["112", "114", "155", "110"],
-        correct: 1,
-        explanation: "Zehirlenme şüphesinde UZEM (114) aranır."
-    },
-    {
-        level: "kolay",
-        question: "Diyabetik hastada şeker yüksekliği belirtisi nedir?",
-        options: ["Terleme", "Susuzluk", "Titreme", "Baş dönmesi"],
-        correct: 1,
-        explanation: "Hiperglisemide susuzluk, sık idrara çıkma, yorgunluk görülür."
-    },
-    {
-        level: "kolay",
-        question: "Suda boğulma durumunda ilk yapılacak nedir?",
-        options: ["Sıvı çıkarmak", "Solunum kontrolü", "Kalp masajı", "Isıtmak"],
-        correct: 1,
-        explanation: "Suda boğulmada önce solunum yolu açıklığı kontrol edilir."
-    },
-    {
-        level: "kolay",
-        question: "Kemik kırığında hangi belirti görülür?",
-        options: ["Şişlik", "Ağrı", "Deformite", "Hepsi"],
-        correct: 3,
-        explanation: "Kemik kırığında şişlik, ağrı ve deformite görülebilir."
-    },
-    {
-        level: "kolay",
-        question: "Çocukta normal nabız hızı nedir?",
-        options: ["60-100/dk", "80-120/dk", "100-160/dk", "120-180/dk"],
-        correct: 2,
-        explanation: "Çocukta normal nabız hızı yaşa göre değişir, genellikle 100-160/dk arasındadır."
-    },
-    {
-        level: "kolay",
-        question: "Hamile hastada hangi pozisyon tercih edilir?",
-        options: ["Sırt üstü", "Sol yan", "Sağ yan", "Oturur"],
-        correct: 1,
-        explanation: "Hamile hastada sol yan pozisyon tercih edilir (vena kava basısını önler)."
-    },
-    {
-        level: "kolay",
-        question: "Epilepsi nöbeti kaç dakika sürerse tehlikelidir?",
-        options: ["2 dakika", "5 dakika", "10 dakika", "15 dakika"],
-        correct: 1,
-        explanation: "5 dakikadan uzun süren nöbet status epileptikus olarak kabul edilir."
-    },
-    {
-        level: "kolay",
-        question: "Kalp krizi belirtisi hangisidir?",
-        options: ["Göğüs ağrısı", "Nefes darlığı", "Bulantı", "Hepsi"],
-        correct: 3,
-        explanation: "Kalp krizinde göğüs ağrısı, nefes darlığı, bulantı görülebilir."
-    },
-    {
-        level: "kolay",
-        question: "Yüksek ateşte hangi yöntem kullanılmaz?",
-        options: ["Ilık duş", "Soğuk kompres", "Alkol silme", "Giysi çıkarma"],
-        correct: 2,
-        explanation: "Ateş düşürmede alkol silme kullanılmaz, zehirlenme riski vardır."
-    },
-    {
-        level: "kolay",
-        question: "Astım atağında hangi pozisyon verilir?",
-        options: ["Düz yatar", "Oturur", "Yan yatar", "Baş aşağı"],
-        correct: 1,
-        explanation: "Astım atağında hasta oturur pozisyonda tutulur."
-    },
-    {
-        level: "kolay",
-        question: "İnme şüphesinde hangi test yapılır?",
-        options: ["FAST", "ABCDE", "GKS", "APGAR"],
-        correct: 0,
-        explanation: "İnme şüphesinde FAST testi (Face, Arms, Speech, Time) yapılır."
-    },
-    {
-        level: "kolay",
-        question: "Travma hastasında boyun nasıl korunur?",
-        options: ["Hareket ettirme", "İmmobilizasyon", "Masaj", "Esnetme"],
-        correct: 1,
-        explanation: "Travma hastasında boyun immobilizasyon ile korunur."
-    },
-    {
-        level: "kolay",
-        question: "Şeker hastalığında hangi hormon eksiktir?",
-        options: ["İnsülin", "Adrenalin", "Kortizol", "Tiroksin"],
-        correct: 0,
-        explanation: "Şeker hastalığında insülin hormonu eksik veya etkisizdir."
-    },
-    {
-        level: "kolay",
-        question: "Kalp durmasında hangi ilaç kullanılır?",
-        options: ["Aspirin", "Adrenalin", "Antibiyotik", "Ağrı kesici"],
-        correct: 1,
-        explanation: "Kalp durmasında adrenalin (epinefrin) kullanılır."
-    },
-    {
-        level: "kolay",
-        question: "Solunum durmasında kaç saniyede müdahale edilir?",
-        options: ["10 saniye", "30 saniye", "1 dakika", "2 dakika"],
-        correct: 0,
-        explanation: "Solunum durmasında 10 saniye içinde müdahale edilmelidir."
-    },
-    {
-        level: "kolay",
-        question: "Yanık derecesi nasıl belirlenir?",
-        options: ["Renk", "Derinlik", "Ağrı", "Büyüklük"],
-        correct: 1,
-        explanation: "Yanık derecesi derinliğe göre belirlenir (1., 2., 3. derece)."
-    },
-    {
-        level: "kolay",
-        question: "Hipertansiyon hangi değerin üzerindedir?",
-        options: ["120/80", "130/85", "140/90", "150/95"],
-        correct: 2,
-        explanation: "Hipertansiyon 140/90 mmHg ve üzeri değerlerdir."
-    },
-    {
-        level: "kolay",
-        question: "Göğüs ağrısında hangi ilaç verilir?",
-        options: ["Antibiyotik", "Aspirin", "Vitamin", "Ağrı kesici"],
-        correct: 1,
-        explanation: "Kalp krizi şüphesinde aspirin verilir (kontrendikasyon yoksa)."
-    },
-    {
-        level: "kolay",
-        question: "Nöbet geçiren hastaya ne yapılır?",
-        options: ["Ağzına cisim koy", "Sıkıca tut", "Güvenli ortam", "Su ver"],
-        correct: 2,
-        explanation: "Nöbet geçiren hastaya güvenli ortam sağlanır, ağzına cisim konmaz."
-    },
-    {
-        level: "kolay",
-        question: "Çocukta dehidratasyon belirtisi nedir?",
-        options: ["Nemli dil", "Gözyaşı", "Kuru ağız", "Hızlı iyileşme"],
-        correct: 2,
-        explanation: "Çocukta dehidratasyonda kuru ağız, gözyaşı azlığı görülür."
-    },
-    {
-        level: "kolay",
-        question: "Kalp krizi riskini artıran faktör hangisidir?",
-        options: ["Egzersiz", "Sigara", "Meyve", "Su içme"],
-        correct: 1,
-        explanation: "Sigara kalp krizi riskini önemli ölçüde artırır."
-    },
-    {
-        level: "kolay",
-        question: "Acil serviste triage sistemi neye göre yapılır?",
-        options: ["Yaş", "Cinsiyet", "Aciliyet", "Gelme sırası"],
-        correct: 2,
-        explanation: "Triage sistemi hastanın aciliyet durumuna göre yapılır."
-    },
+    if (!favoritesSection || !favoritesGrid) return;
+    
+    if (favorites.length === 0) {
+        favoritesSection.style.display = 'none';
+        return;
+    }
+    
+    favoritesSection.style.display = 'block';
+    favoritesGrid.innerHTML = '';
+    
+    favorites.forEach(favId => {
+        const [grupName, key] = favId.split('_');
+        const grupKey = grupName.toLowerCase() === 'yetişkin' || grupName.toLowerCase().startsWith('y') ? 'yetiskin' : 'cocuk';
+        const algo = algorithmData[grupKey]?.[key];
+        
+        if (!algo) return;
+        
+        const favItem = document.createElement('div');
+        favItem.className = 'favorite-item';
+        favItem.innerHTML = `
+            <div style="font-weight: bold; margin-bottom: 5px;">${escapeHtml(algo.title)}</div>
+            <div style="font-size: 12px; color: var(--muted);">${grupName}</div>
+        `;
+        favItem.onclick = () => showAlgo(key, grupName);
+        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '✕';
+        removeBtn.style.cssText = 'float: right; background: transparent; border: none; color: var(--danger); cursor: pointer; font-size: 18px; padding: 0; width: 24px; height: 24px;';
+        removeBtn.onclick = (e) => {
+            e.stopPropagation();
+            toggleFavorite(key, grupName);
+        };
+        
+        favItem.appendChild(removeBtn);
+        favoritesGrid.appendChild(favItem);
+    });
+    
+    if (noFavorites) noFavorites.style.display = 'none';
+}
+
+// Sayfa yüklendiğinde favorileri göster
+window.addEventListener('load', () => {
+    setTimeout(renderFavorites, 100);
+});
+
+// ========== GELİŞMİŞ ARAMA SİSTEMİ ==========
+function fuzzyMatch(str, pattern) {
+    pattern = pattern.toLowerCase();
+    str = str.toLowerCase();
+    let patternIdx = 0;
+    for (let i = 0; i < str.length && patternIdx < pattern.length; i++) {
+        if (str[i] === pattern[patternIdx]) {
+            patternIdx++;
+        }
+    }
+    return patternIdx === pattern.length;
+}
+
+function searchAlgo() {
+    const q = document.getElementById("searchInput") ? document.getElementById("searchInput").value.trim().toLowerCase() : '';
+    const buttons = document.querySelectorAll("button[onclick*='showAlgo']");
+    
+    if (!q) {
+        buttons.forEach(btn => {
+            btn.style.display = 'inline-block';
+        });
+        return;
+    }
+    
+    let matchCount = 0;
+    
+    buttons.forEach(btn => {
+        const text = (btn.textContent || btn.innerText || '').toLowerCase();
+        const tags = (btn.getAttribute('data-tags') || '').toLowerCase();
+        const category = (btn.getAttribute('data-category') || '').toLowerCase();
+        
+        // 1. Tam eşleşme (en yüksek öncelik)
+        const exactMatch = text.includes(q) || tags.includes(q) || category.includes(q);
+        
+        // 2. Fuzzy match (yazım hatası toleransı)
+        const fuzzyMatchText = fuzzyMatch(text, q) || fuzzyMatch(tags, q);
+        
+        // 3. Kelime bazlı arama (boşluklarla ayrılmış)
+        const words = q.split(/\s+/);
+        const wordMatch = words.every(word => 
+            text.includes(word) || tags.includes(word) || category.includes(word)
+        );
+        
+        const match = exactMatch || fuzzyMatchText || wordMatch;
+        btn.style.display = match ? 'inline-block' : 'none';
+        
+        if (match) matchCount++;
+    });
+    
+    // Arama sonuçları yoksa bilgi ver
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        if (q && matchCount === 0) {
+            searchInput.style.border = '2px solid var(--danger)';
+            searchInput.title = 'Sonuç bulunamadı. Farklı bir arama terimi deneyin.';
+        } else {
+            searchInput.style.border = '';
+            searchInput.title = `${matchCount} sonuç bulundu`;
+        }
+    }
+}
+
+// Enter tuşu ile arama
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchAlgo();
+            }
+        });
+    }
+});

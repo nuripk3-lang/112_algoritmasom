@@ -24,7 +24,7 @@ const urlsToCache = [
   './sound/wheezing.mp3',
   './sound/ronkus.mp3',
   './sound/stridor.mp3',
-  './sound/krup.mp3',
+  './sound/krup.mp3?v=6',
   './sound/ronküs.MP3',
   './sound/KABA RALLER .MP3',
   './video/dekompresyon.mp4',
@@ -67,10 +67,10 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // GET istekleri için cache stratejisi uygula
   if (event.request.method === 'GET') {
-    // app.js için her zaman network'ten getir (cache bypass)
-    if (event.request.url.includes('app.js')) {
+    // app.js ve ses dosyaları için her zaman network'ten getir (cache bypass)
+    if (event.request.url.includes('app.js') || event.request.url.includes('sound/')) {
       event.respondWith(
-        fetch(event.request.url + '?v=' + Date.now())
+        fetch(event.request.url + (event.request.url.includes('?') ? '&' : '?') + 'v=' + Date.now())
           .catch(() => caches.match(event.request))
       );
       return;

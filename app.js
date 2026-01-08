@@ -2609,6 +2609,17 @@ function openEkgGallery(liste) {
     modal.onclick = (e) => { if(e.target === modal) modal.remove(); };
 }
 
+// Video yükleme göstergeleri
+function showVideoLoader() {
+    const loader = document.getElementById('videoLoader');
+    if (loader) loader.style.display = 'block';
+}
+
+function hideVideoLoader() {
+    const loader = document.getElementById('videoLoader');
+    if (loader) loader.style.display = 'none';
+}
+
 function openVideoPlayer(videoUrl, videoBaslik) {
     try {
         const modal = document.createElement('div');
@@ -2618,10 +2629,28 @@ function openVideoPlayer(videoUrl, videoBaslik) {
             <div style="width:100%; max-width:500px; position:relative;">
                 <h3 style="color:white; text-align:center; margin-bottom:15px; font-family:sans-serif;">${escapeHtml(videoBaslik)}</h3>
                 
-                <video controls autoplay preload="metadata" style="width:100%; border-radius:12px; border:1px solid #444; background:#000;">
-                    <source src="${videoUrl}" type="video/mp4">
-                    Tarayıcınız video oynatmayı desteklemiyor.
-                </video>
+                <div id="videoContainer" style="position: relative;">
+                    <div id="videoLoader" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; z-index: 10;">
+                        <div style="font-size: 24px; margin-bottom: 10px;">📹</div>
+                        <div>Video yükleniyor...</div>
+                        <div style="margin-top: 10px;">
+                            <div style="width: 40px; height: 4px; background: rgba(255,255,255,0.3); border-radius: 2px; overflow: hidden; margin: 0 auto;">
+                                <div style="width: 100%; height: 100%; background: #f59e0b; animation: loading 1.5s infinite;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <video id="mainVideo" controls preload="metadata" style="width:100%; border-radius:12px; border:1px solid #444; background:#000;" onloadstart="showVideoLoader()" oncanplay="hideVideoLoader()">
+                        <source src="${videoUrl}" type="video/mp4">
+                        Tarayıcınız video oynatmayı desteklemiyor.
+                    </video>
+                </div>
+                
+                <style>
+                @keyframes loading {
+                    0% { transform: translateX(-100%); }
+                    100% { transform: translateX(100%); }
+                }
+                </style>
                 
                 <div style="margin-top:20px; text-align:center;">
                     <button onclick="this.parentElement.parentElement.parentElement.remove()" 

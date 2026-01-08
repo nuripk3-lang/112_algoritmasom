@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v13-quiz';
+const CACHE_NAME = '112-asistan-v13-splash-fix';
 const urlsToCache = [
   './',
   './index.html',

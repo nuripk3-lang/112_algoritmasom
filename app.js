@@ -1114,34 +1114,17 @@ function stopAllSounds() {
 // Sayfa yüklendiğinde Splash Screen'i yönet
 window.addEventListener('load', () => {
     const splash = document.getElementById('splash-screen');
-    const bar = document.getElementById('loading-bar');
     
-    // Önce yükleme çubuğunu doldur
-    setTimeout(() => {
-        bar.style.width = '100%';
-    }, 100);
-
-    // 2 saniye sonra ekranı kaldır
-    setTimeout(() => {
-        splash.style.opacity = '0';
+    if (splash) {
+        // 2.5 saniye sonra ekranı kaldır
         setTimeout(() => {
-            splash.style.display = 'none';
-        }, 500);
-    }, 2000);
-});
-
-// Splash Screen Yönetimi
-window.addEventListener('load', () => {
-    const splash = document.getElementById('splash-screen');
-    
-    // Uygulama tamamen hazır olduktan 2.5 saniye sonra kapat
-    setTimeout(() => {
-        splash.style.opacity = '0';
-        splash.style.transform = 'scale(1.1)'; // Hafif büyüme efektiyle çıkış
-        setTimeout(() => {
-            splash.style.display = 'none';
-        }, 800);
-    }, 2500);
+            splash.style.opacity = '0';
+            splash.style.transform = 'scale(1.05)'; // Hafif büyüme efektiyle çıkış
+            setTimeout(() => {
+                splash.style.display = 'none';
+            }, 800);
+        }, 2500);
+    }
 });
 
 // --- SERVICE WORKER KAYDI (PWA İÇİN ŞART) ---

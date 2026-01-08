@@ -574,7 +574,7 @@ let html = `
     'astim': 'wheezing (Hırıltı)',
     'koah': 'Ronküs (Kaba Ses)',
     'anafilaksi': 'Stridor (Üst Havayolu Daralması)',
-    'krup': 'krup (Pediyatrik Ses)' // Bunu ekle
+    'krup': 'Krup Sesi (Havlar Tarzda Öksürük)'
 };
 
     if (sesVerileri[currentKey]) {
@@ -956,12 +956,12 @@ const stridorSound = new Audio('sound/stridor.mp3');
 const krupSound = new Audio('sound/krup.mp3');
 
 function playSound(type) {
+    console.log("Ses çalınıyor:", type); // Debug mesajı
     stopAllSounds();
     if(type === 'astim') wheezingSound.play().catch(e => console.log("Astım sesi hatası:", e));
     if(type === 'koah') ronkusSound.play().catch(e => console.log("KOAH sesi hatası:", e));
     if(type === 'anafilaksi') stridorSound.play().catch(e => console.log("Stridor sesi hatası:", e));
     if(type === 'krup') krupSound.play().catch(e => console.log("Krup sesi hatası:", e));
-
 }
 
 function stopAllSounds() {

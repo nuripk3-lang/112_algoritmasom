@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v8-new-krup';
+const CACHE_NAME = '112-asistan-v9-final';
 const urlsToCache = [
   './',
   './index.html',

@@ -1032,6 +1032,67 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
+
+// --- LANDSCAPE MODE SUPPORT ---
+function handleOrientationChange() {
+    // Orientation değişikliğinde layout'u optimize et
+    const isLandscape = window.innerWidth > window.innerHeight;
+    const body = document.body;
+    
+    if (isLandscape) {
+        body.classList.add('landscape-mode');
+        console.log('📱 Landscape mode aktif');
+        
+        // İlk kez landscape'e geçtiğinde bilgi göster
+        if (!localStorage.getItem('landscape-tip-shown')) {
+            setTimeout(() => {
+                const tip = document.createElement('div');
+                tip.style = `
+                    position: fixed;
+                    top: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(37, 99, 235, 0.95);
+                    color: white;
+                    padding: 8px 16px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    z-index: 1000;
+                    animation: fadeInOut 3s ease-in-out;
+                `;
+                tip.textContent = '📱 Yatay ekran modu aktif - Daha geniş görünüm!';
+                document.body.appendChild(tip);
+                
+                setTimeout(() => tip.remove(), 3000);
+                localStorage.setItem('landscape-tip-shown', 'true');
+            }, 500);
+        }
+    } else {
+        body.classList.remove('landscape-mode');
+        console.log('📱 Portrait mode aktif');
+    }
+    
+    // Grid layout'u yeniden hesapla
+    setTimeout(() => {
+        const grids = document.querySelectorAll('.grid');
+        grids.forEach(grid => {
+            // Force reflow to apply new CSS
+            grid.style.display = 'none';
+            grid.offsetHeight; // Trigger reflow
+            grid.style.display = 'grid';
+        });
+    }, 100);
+}
+
+// Orientation change event listeners
+window.addEventListener('orientationchange', () => {
+    setTimeout(handleOrientationChange, 100); // iOS için delay
+});
+
+window.addEventListener('resize', handleOrientationChange);
+
+// Sayfa yüklendiğinde initial orientation check
+window.addEventListener('load', handleOrientationChange);
 function filterYetiskin(category, titleText) {
     // Başlığı değiştir
     document.getElementById('yetiskinTitle').textContent = titleText;

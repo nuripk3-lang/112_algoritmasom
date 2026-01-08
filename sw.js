@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v6-krup-fix';
+const CACHE_NAME = '112-asistan-v8-new-krup';
 const urlsToCache = [
   './',
   './index.html',
@@ -24,7 +24,7 @@ const urlsToCache = [
   './sound/wheezing.mp3',
   './sound/ronkus.mp3',
   './sound/stridor.mp3',
-  './sound/krup.mp3?v=6',
+  './sound/krup.mp3',
   './sound/ronküs.MP3',
   './sound/KABA RALLER .MP3',
   './video/dekompresyon.mp4',

@@ -529,6 +529,9 @@ function escapeHtml(str) {
 
 function showAlgo(key, grupName) {
   try {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
     const grupKey = (grupName && grupName.toLowerCase().startsWith('y')) ? 'yetiskin' : 'cocuk';
     const algo = (algorithmData[grupKey] || {})[key.toLowerCase().trim()];
     const contentEl = document.getElementById("content");
@@ -780,6 +783,9 @@ function clearContent() {
 }
 
 function showGroup(g) {
+  // Sayfa değiştiğinde tüm sesleri durdur
+  stopAllSounds();
+  
   // Tüm ana bölümleri gizle
   document.getElementById("yetiskin").style.display = "none";
   document.getElementById("cocuk").style.display = "none";
@@ -1047,6 +1053,9 @@ function filterYetiskin(category, titleText) {
 }
 
 function resetYetiskinView() {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
     // Görünümü başa döndür
     document.getElementById('yetiskinTitle').textContent = 'Yetişkin Ön Tanılar';
     document.getElementById('yetiskinCategoryMenu').style.display = 'grid';
@@ -1125,6 +1134,9 @@ function openVideoPlayer(videoUrl, videoBaslik) {
 }
 
 function showProcedures() {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
     // Ana sayfadaki o grid butonlarını gizle
     const gridEl = document.querySelector('.grid');
     if(gridEl) gridEl.style.display = 'none';
@@ -1239,6 +1251,9 @@ function calculatePediatric() {
     `;
 }
 function showChildCalc() {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
     const gridEl = document.querySelector('.grid');
     if(gridEl) gridEl.style.display = 'none';
 
@@ -1292,6 +1307,9 @@ function filterCocuk(category, title) {
 }
 
 function resetCocukView() {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
     document.getElementById('cocukCategoryMenu').style.display = 'grid'; // Kategorileri geri getir
     document.getElementById('cocukTitle').innerText = 'Çocuk Ön Tanılar'; // Başlığı sıfırla
     document.getElementById('cocukGrid').style.display = 'none'; // Butonları gizle

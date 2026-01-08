@@ -467,3 +467,25 @@ body.landscape-mode #cprBox {
 
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce){ *{ transition:none !important; animation:none !important; } }
+
+/* ===== QUIZ GAME ANIMATIONS ===== */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Quiz specific styles */
+.quiz-timer-pulse {
+    animation: pulse 1s infinite;
+}
+
+/* Quiz button hover effects */
+#optionsContainer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+}
+
+#optionsContainer button:active {
+    transform: translateY(0);
+}

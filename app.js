@@ -5,7 +5,131 @@ const proceduresData = [
     { isim: "İğne Krikotirotomi", link: "video/krikotomi.mp4" },
     { isim: "Kemik İçi (IO) Uygulama", link: "video/io.mp4" }
 ];
-const algorithmData = {
+// --- QUIZ GAME DATA ---
+const quizQuestions = [
+    // Kolay Seviye
+    {
+        level: "kolay",
+        question: "Normal yetişkin kalp hızı dakikada kaç atımdır?",
+        options: ["40-60", "60-100", "100-120", "120-150"],
+        correct: 1,
+        explanation: "Normal yetişkin kalp hızı dakikada 60-100 atımdır."
+    },
+    {
+        level: "kolay", 
+        question: "CPR'da göğüs kompresyonu oranı nedir?",
+        options: ["15:2", "30:2", "5:1", "10:2"],
+        correct: 1,
+        explanation: "CPR'da göğüs kompresyonu ve solunum oranı 30:2'dir."
+    },
+    {
+        level: "kolay",
+        question: "Anafilaksi tedavisinde ilk tercih ilaç nedir?",
+        options: ["Antihistaminik", "Steroid", "Adrenalin", "Bronkodilatatör"],
+        correct: 2,
+        explanation: "Anafilaksi tedavisinde ilk tercih adrenalin (epinefrin) IM'dir."
+    },
+    {
+        level: "kolay",
+        question: "Hipoglisemi belirtisi hangisidir?",
+        options: ["Yüksek ateş", "Terleme ve titreme", "Yavaş nabız", "Yüksek tansiyon"],
+        correct: 1,
+        explanation: "Hipoglisemide terleme, titreme, baş dönmesi görülür."
+    },
+    {
+        level: "kolay",
+        question: "Normal vücut sıcaklığı kaç derecedir?",
+        options: ["35-36°C", "36-37.5°C", "37.5-38°C", "38-39°C"],
+        correct: 1,
+        explanation: "Normal vücut sıcaklığı 36-37.5°C arasındadır."
+    },
+    
+    // Orta Seviye
+    {
+        level: "orta",
+        question: "STEMI'de PCI hedef süresi nedir?",
+        options: ["60 dakika", "90 dakika", "120 dakika", "180 dakika"],
+        correct: 1,
+        explanation: "STEMI'de PCI (primer anjiyoplasti) hedef süresi 90 dakikadır."
+    },
+    {
+        level: "orta",
+        question: "Çocuklarda bradikardi sınırı nedir?",
+        options: ["<50/dk", "<60/dk", "<70/dk", "<80/dk"],
+        correct: 2,
+        explanation: "Çocuklarda bradikardi genellikle <70/dk olarak kabul edilir."
+    },
+    {
+        level: "orta",
+        question: "Magnezyum sülfat dozu (preeklampsi) nedir?",
+        options: ["2-4 gr", "4-6 gr", "6-8 gr", "8-10 gr"],
+        correct: 1,
+        explanation: "Preeklampside MgSO4 yükleme dozu 4-6 gr IV'dir."
+    },
+    {
+        level: "orta",
+        question: "Krup tedavisinde kullanılan steroid nedir?",
+        options: ["Prednizolon", "Deksametazon", "Hidrokortizol", "Metilprednizolon"],
+        correct: 1,
+        explanation: "Krup tedavisinde deksametazon 0.6 mg/kg kullanılır."
+    },
+    {
+        level: "orta",
+        question: "Hipotermik arrest'te adrenalin ne zaman verilir?",
+        options: ["Hemen", "Sıcaklık >30°C", "Sıcaklık >32°C", "Sıcaklık >35°C"],
+        correct: 1,
+        explanation: "Hipotermik arrest'te sıcaklık >30°C olana kadar adrenalin verilmez."
+    },
+    
+    // Zor Seviye
+    {
+        level: "zor",
+        question: "Crush sendromunda hangi elektrolit bozukluğu en tehlikelidir?",
+        options: ["Hiponatremi", "Hiperkalemi", "Hipokalsemi", "Hipernatremi"],
+        correct: 1,
+        explanation: "Crush sendromunda hiperkalemi en tehlikeli komplikasyondur."
+    },
+    {
+        level: "zor",
+        question: "Post-ROSC hedef SpO2 nedir?",
+        options: ["88-92%", "92-96%", "94-98%", "98-100%"],
+        correct: 2,
+        explanation: "Post-ROSC hedef SpO2 %94-98'dir (hiperoksiden kaçınılır)."
+    },
+    {
+        level: "zor",
+        question: "Adenozin'in yarı ömrü ne kadardır?",
+        options: ["5-10 saniye", "10-15 saniye", "15-20 saniye", "20-30 saniye"],
+        correct: 0,
+        explanation: "Adenozin'in yarı ömrü çok kısa, yaklaşık 5-10 saniyedir."
+    },
+    {
+        level: "zor",
+        question: "Epiglotit'te hangi pozisyon tercih edilir?",
+        options: ["Sırt üstü", "Yan yatar", "Tripod pozisyonu", "Trendelenburg"],
+        correct: 2,
+        explanation: "Epiglotit'te çocuk en rahat ettiği tripod pozisyonunda tutulur."
+    },
+    {
+        level: "zor",
+        question: "Torsades de Pointes tedavisinde kullanılan ilaç nedir?",
+        options: ["Amiodaron", "Lidokain", "Magnezyum", "Prokainamid"],
+        correct: 2,
+        explanation: "Torsades de Pointes tedavisinde magnezyum sülfat kullanılır."
+    }
+];
+
+// Quiz Game State
+let quizState = {
+    currentQuestion: 0,
+    score: 0,
+    timeLeft: 60,
+    gameActive: false,
+    timer: null,
+    questions: [],
+    startTime: null,
+    level: 'kolay'
+};
    yetiskin: {
     aks: { category: "cardiac", title: "🫀 Akut Koroner Sendrom (AKS)", 
 ekgList: [
@@ -1093,6 +1217,351 @@ window.addEventListener('resize', handleOrientationChange);
 
 // Sayfa yüklendiğinde initial orientation check
 window.addEventListener('load', handleOrientationChange);
+
+// --- QUIZ GAME FUNCTIONS ---
+function showQuizGame() {
+    // Sayfa değiştiğinde tüm sesleri durdur
+    stopAllSounds();
+    
+    // Ana sayfadaki grid butonlarını gizle
+    const gridEl = document.querySelector('.grid');
+    if(gridEl) gridEl.style.display = 'none';
+
+    const contentEl = document.getElementById("content");
+    contentEl.innerHTML = `
+        <button class="back-btn" onclick="clearContent()">⬅️ Ana Menü</button>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h2 style="color: #f59e0b; margin: 0; font-size: 1.4rem;">🎮 112 Quiz Challenge</h2>
+            <p style="color: #6b7280; margin: 5px 0;">60 saniyede en fazla soruyu çöz!</p>
+        </div>
+
+        <div id="quizMenu" style="display: block;">
+            <div style="background: #fff; padding: 20px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0; color: #1f2937;">🎯 Zorluk Seviyesi Seç</h3>
+                <div style="display: grid; gap: 10px;">
+                    <button onclick="startQuiz('kolay')" style="background: linear-gradient(135deg, #10b981, #059669); padding: 12px; border-radius: 12px; color: white; border: none; font-size: 16px;">
+                        🟢 Kolay - Temel bilgiler
+                    </button>
+                    <button onclick="startQuiz('orta')" style="background: linear-gradient(135deg, #f59e0b, #d97706); padding: 12px; border-radius: 12px; color: white; border: none; font-size: 16px;">
+                        🟡 Orta - Detaylı bilgiler  
+                    </button>
+                    <button onclick="startQuiz('zor')" style="background: linear-gradient(135deg, #ef4444, #dc2626); padding: 12px; border-radius: 12px; color: white; border: none; font-size: 16px;">
+                        🔴 Zor - Uzman seviyesi
+                    </button>
+                    <button onclick="startQuiz('karisik')" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed); padding: 12px; border-radius: 12px; color: white; border: none; font-size: 16px;">
+                        🌈 Karışık - Tüm seviyeler
+                    </button>
+                </div>
+            </div>
+            
+            <div style="background: #f8fafc; padding: 16px; border-radius: 12px; margin-bottom: 20px;">
+                <h4 style="margin-top: 0; color: #374151;">📊 En İyi Skorların</h4>
+                <div id="leaderboard"></div>
+            </div>
+            
+            <div style="background: #fef3c7; padding: 16px; border-radius: 12px; border-left: 4px solid #f59e0b;">
+                <h4 style="margin-top: 0; color: #92400e;">ℹ️ Nasıl Oynanır?</h4>
+                <ul style="margin: 0; padding-left: 20px; color: #92400e;">
+                    <li>60 saniye süren var</li>
+                    <li>Doğru cevap = +10 puan</li>
+                    <li>Yanlış cevap = -5 puan</li>
+                    <li>Hızlı cevap = bonus puan</li>
+                    <li>En yüksek skoru hedefle!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="quizGame" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #1f2937; color: white; padding: 15px; border-radius: 12px;">
+                <div>
+                    <span style="font-size: 18px; font-weight: bold;">⏱️ <span id="timeDisplay">60</span>s</span>
+                </div>
+                <div>
+                    <span style="font-size: 18px; font-weight: bold;">🏆 <span id="scoreDisplay">0</span> puan</span>
+                </div>
+                <div>
+                    <span style="font-size: 16px;">📝 <span id="questionCounter">1/∞</span></span>
+                </div>
+            </div>
+            
+            <div id="questionContainer" style="background: white; padding: 20px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div id="questionText" style="font-size: 18px; font-weight: 600; color: #1f2937; margin-bottom: 20px; line-height: 1.4;"></div>
+                <div id="optionsContainer" style="display: grid; gap: 10px;"></div>
+            </div>
+            
+            <div id="feedbackContainer" style="display: none; padding: 15px; border-radius: 12px; margin-bottom: 15px;"></div>
+        </div>
+
+        <div id="quizResults" style="display: none;">
+            <div style="text-align: center; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                <div id="resultIcon" style="font-size: 4rem; margin-bottom: 15px;"></div>
+                <h3 id="resultTitle" style="color: #1f2937; margin-bottom: 10px;"></h3>
+                <div id="resultStats" style="color: #6b7280; margin-bottom: 20px;"></div>
+                <div style="display: grid; gap: 10px; max-width: 300px; margin: 0 auto;">
+                    <button onclick="showQuizGame()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px; border-radius: 12px; border: none; font-size: 16px;">
+                        🔄 Tekrar Oyna
+                    </button>
+                    <button onclick="clearContent()" style="background: #6b7280; color: white; padding: 12px; border-radius: 12px; border: none; font-size: 16px;">
+                        🏠 Ana Menü
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    contentEl.style.display = "block";
+    loadLeaderboard();
+}
+
+function startQuiz(level) {
+    quizState.level = level;
+    quizState.currentQuestion = 0;
+    quizState.score = 0;
+    quizState.timeLeft = 60;
+    quizState.gameActive = true;
+    quizState.startTime = Date.now();
+    
+    // Soruları seviyeye göre filtrele
+    if (level === 'karisik') {
+        quizState.questions = [...quizQuestions].sort(() => Math.random() - 0.5);
+    } else {
+        quizState.questions = quizQuestions.filter(q => q.level === level).sort(() => Math.random() - 0.5);
+    }
+    
+    document.getElementById('quizMenu').style.display = 'none';
+    document.getElementById('quizGame').style.display = 'block';
+    
+    startTimer();
+    showQuestion();
+}
+
+function startTimer() {
+    quizState.timer = setInterval(() => {
+        quizState.timeLeft--;
+        document.getElementById('timeDisplay').textContent = quizState.timeLeft;
+        
+        // Son 10 saniyede kırmızı yap
+        const timeDisplay = document.getElementById('timeDisplay');
+        if (quizState.timeLeft <= 10) {
+            timeDisplay.style.color = '#ef4444';
+            timeDisplay.style.animation = 'pulse 1s infinite';
+        }
+        
+        if (quizState.timeLeft <= 0) {
+            endQuiz();
+        }
+    }, 1000);
+}
+
+function showQuestion() {
+    if (quizState.currentQuestion >= quizState.questions.length) {
+        // Soruları bitirdiyse karıştır ve devam et
+        quizState.questions = [...quizState.questions].sort(() => Math.random() - 0.5);
+        quizState.currentQuestion = 0;
+    }
+    
+    const question = quizState.questions[quizState.currentQuestion];
+    document.getElementById('questionText').textContent = question.question;
+    document.getElementById('questionCounter').textContent = `${quizState.currentQuestion + 1}. Soru`;
+    
+    const optionsContainer = document.getElementById('optionsContainer');
+    optionsContainer.innerHTML = '';
+    
+    question.options.forEach((option, index) => {
+        const button = document.createElement('button');
+        button.textContent = option;
+        button.style = `
+            padding: 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            background: white;
+            color: #1f2937;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        `;
+        button.onmouseover = () => {
+            button.style.borderColor = '#3b82f6';
+            button.style.background = '#eff6ff';
+        };
+        button.onmouseout = () => {
+            button.style.borderColor = '#e5e7eb';
+            button.style.background = 'white';
+        };
+        button.onclick = () => selectAnswer(index);
+        optionsContainer.appendChild(button);
+    });
+    
+    // Feedback container'ı gizle
+    document.getElementById('feedbackContainer').style.display = 'none';
+}
+
+function selectAnswer(selectedIndex) {
+    if (!quizState.gameActive) return;
+    
+    const question = quizState.questions[quizState.currentQuestion];
+    const isCorrect = selectedIndex === question.correct;
+    const timeBonus = Math.max(0, Math.floor((60 - (60 - quizState.timeLeft)) / 10)); // Hızlı cevap bonusu
+    
+    // Puanlama
+    if (isCorrect) {
+        quizState.score += 10 + timeBonus;
+    } else {
+        quizState.score = Math.max(0, quizState.score - 5);
+    }
+    
+    // Feedback göster
+    showFeedback(isCorrect, question.explanation, timeBonus);
+    
+    // Skor güncelle
+    document.getElementById('scoreDisplay').textContent = quizState.score;
+    
+    // Sonraki soruya geç
+    setTimeout(() => {
+        quizState.currentQuestion++;
+        showQuestion();
+    }, 2000);
+}
+
+function showFeedback(isCorrect, explanation, timeBonus) {
+    const feedbackContainer = document.getElementById('feedbackContainer');
+    const bgColor = isCorrect ? '#dcfce7' : '#fee2e2';
+    const textColor = isCorrect ? '#166534' : '#991b1b';
+    const icon = isCorrect ? '✅' : '❌';
+    
+    let bonusText = '';
+    if (isCorrect && timeBonus > 0) {
+        bonusText = ` (+${timeBonus} hız bonusu!)`;
+    }
+    
+    feedbackContainer.innerHTML = `
+        <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <span style="font-size: 24px;">${icon}</span>
+            <div>
+                <div style="font-weight: bold; color: ${textColor}; margin-bottom: 5px;">
+                    ${isCorrect ? 'Doğru!' : 'Yanlış!'} ${bonusText}
+                </div>
+                <div style="color: ${textColor}; font-size: 14px;">
+                    ${explanation}
+                </div>
+            </div>
+        </div>
+    `;
+    feedbackContainer.style.background = bgColor;
+    feedbackContainer.style.display = 'block';
+}
+
+function endQuiz() {
+    quizState.gameActive = false;
+    clearInterval(quizState.timer);
+    
+    // Skoru kaydet
+    saveScore(quizState.level, quizState.score);
+    
+    // Sonuçları göster
+    showResults();
+}
+
+function showResults() {
+    document.getElementById('quizGame').style.display = 'none';
+    document.getElementById('quizResults').style.display = 'block';
+    
+    const totalTime = Math.floor((Date.now() - quizState.startTime) / 1000);
+    const questionsAnswered = quizState.currentQuestion;
+    
+    // Performans değerlendirmesi
+    let resultIcon, resultTitle, resultMessage;
+    if (quizState.score >= 100) {
+        resultIcon = '🏆';
+        resultTitle = 'Mükemmel!';
+        resultMessage = 'Harika bir performans sergileddin!';
+    } else if (quizState.score >= 70) {
+        resultIcon = '🥇';
+        resultTitle = 'Çok İyi!';
+        resultMessage = 'Güzel bir skor elde ettin!';
+    } else if (quizState.score >= 40) {
+        resultIcon = '🥈';
+        resultTitle = 'İyi!';
+        resultMessage = 'Fena değil, biraz daha çalışabilirsin!';
+    } else {
+        resultIcon = '🥉';
+        resultTitle = 'Başlangıç';
+        resultMessage = 'Pratik yapmaya devam et!';
+    }
+    
+    document.getElementById('resultIcon').textContent = resultIcon;
+    document.getElementById('resultTitle').textContent = resultTitle;
+    document.getElementById('resultStats').innerHTML = `
+        <div style="font-size: 18px; font-weight: bold; color: #f59e0b; margin-bottom: 10px;">
+            ${quizState.score} Puan
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left;">
+            <div>📝 Soru: ${questionsAnswered}</div>
+            <div>⏱️ Süre: ${totalTime}s</div>
+            <div>🎯 Seviye: ${quizState.level}</div>
+            <div>📊 Ortalama: ${questionsAnswered > 0 ? Math.round(quizState.score / questionsAnswered) : 0}/soru</div>
+        </div>
+        <div style="margin-top: 15px; font-size: 14px;">
+            ${resultMessage}
+        </div>
+    `;
+}
+
+function saveScore(level, score) {
+    const scores = JSON.parse(localStorage.getItem('quiz-scores') || '{}');
+    if (!scores[level]) scores[level] = [];
+    
+    scores[level].push({
+        score: score,
+        date: new Date().toLocaleDateString('tr-TR'),
+        timestamp: Date.now()
+    });
+    
+    // En iyi 5 skoru tut
+    scores[level] = scores[level]
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 5);
+    
+    localStorage.setItem('quiz-scores', JSON.stringify(scores));
+}
+
+function loadLeaderboard() {
+    const scores = JSON.parse(localStorage.getItem('quiz-scores') || '{}');
+    const leaderboard = document.getElementById('leaderboard');
+    
+    if (Object.keys(scores).length === 0) {
+        leaderboard.innerHTML = '<p style="color: #6b7280; font-style: italic;">Henüz skor yok. İlk oyunu sen oyna!</p>';
+        return;
+    }
+    
+    let html = '';
+    ['kolay', 'orta', 'zor', 'karisik'].forEach(level => {
+        if (scores[level] && scores[level].length > 0) {
+            const levelNames = {
+                'kolay': '🟢 Kolay',
+                'orta': '🟡 Orta', 
+                'zor': '🔴 Zor',
+                'karisik': '🌈 Karışık'
+            };
+            
+            html += `<div style="margin-bottom: 15px;">
+                <h5 style="margin: 0 0 8px 0; color: #374151;">${levelNames[level]}</h5>`;
+            
+            scores[level].slice(0, 3).forEach((score, index) => {
+                const medals = ['🥇', '🥈', '🥉'];
+                html += `<div style="display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #f3f4f6;">
+                    <span>${medals[index]} ${score.score} puan</span>
+                    <span style="color: #6b7280; font-size: 12px;">${score.date}</span>
+                </div>`;
+            });
+            
+            html += '</div>';
+        }
+    });
+    
+    leaderboard.innerHTML = html || '<p style="color: #6b7280; font-style: italic;">Henüz skor yok.</p>';
+}
 function filterYetiskin(category, titleText) {
     // Başlığı değiştir
     document.getElementById('yetiskinTitle').textContent = titleText;

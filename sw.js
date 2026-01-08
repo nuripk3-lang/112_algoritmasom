@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v15-syntax-fix';
+const CACHE_NAME = '112-asistan-v18-300-questions';
 const urlsToCache = [
   './',
   './index.html',

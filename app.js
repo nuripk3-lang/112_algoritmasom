@@ -130,7 +130,10 @@ let quizState = {
     startTime: null,
     level: 'kolay'
 };
-   yetiskin: {
+
+// Algoritma verileri
+const algorithmData = {
+    yetiskin: {
     aks: { category: "cardiac", title: "🫀 Akut Koroner Sendrom (AKS)", 
 ekgList: [
         { isim: "Derivasyonlar ve Komşu Yüzeyler", link: "img/ekg1.jpg" }, // Yeni eklediğimiz

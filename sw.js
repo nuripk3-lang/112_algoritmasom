@@ -1,4 +1,4 @@
-const CACHE_NAME = '112-asistan-v14-splash-debug';
+const CACHE_NAME = '112-asistan-v15-syntax-fix';
 const urlsToCache = [
   './',
   './index.html',
